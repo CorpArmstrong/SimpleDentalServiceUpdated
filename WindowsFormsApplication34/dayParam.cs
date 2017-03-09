@@ -29,11 +29,6 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -103,7 +98,6 @@ namespace DSS
             ((RaspChenge)this.Tag).begDay = dateTimePickerBeg.Value;
             ((RaspChenge)this.Tag).endDay = dateTimePickerEnd.Value;
             ((RaspChenge)this.Tag).perDay = Convert.ToInt32(numericUpDownPeriod.Value);
-
         }
 
 
@@ -112,7 +106,6 @@ namespace DSS
             ((ZapisZur)this.Tag).begDay = dateTimePickerBeg.Value;
             ((ZapisZur)this.Tag).endDay = dateTimePickerEnd.Value;
             ((ZapisZur)this.Tag).perDay = Convert.ToInt32(numericUpDownPeriod.Value);
-
         }
 
         private void button2_Click(object sender, EventArgs e)

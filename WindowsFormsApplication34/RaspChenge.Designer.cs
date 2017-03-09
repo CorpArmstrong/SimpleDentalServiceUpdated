@@ -325,10 +325,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(124, 235);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.Tag = "1";
-            this.dataGridView1.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView1.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView1.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView1.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn1
             // 
@@ -371,19 +371,19 @@
             this.toolStripMenuItem3});
             this.contextMenuStripGRID.Name = "contextMenuStrip1";
             this.contextMenuStripGRID.ShowImageMargin = false;
-            this.contextMenuStripGRID.Size = new System.Drawing.Size(207, 48);
+            this.contextMenuStripGRID.Size = new System.Drawing.Size(209, 48);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(206, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(208, 22);
             this.toolStripMenuItem7.Text = "Параметры этого дня";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.dayParamToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(206, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(208, 22);
             this.toolStripMenuItem3.Text = "Параметры выбранных дней";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.dayChekParamToolStripMenuItem_Click);
             // 
@@ -429,10 +429,10 @@
             this.dataGridView2.Size = new System.Drawing.Size(124, 235);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.Tag = "2";
-            this.dataGridView2.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView2.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView2.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView2.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn2
             // 
@@ -506,10 +506,10 @@
             this.dataGridView3.Size = new System.Drawing.Size(124, 235);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.Tag = "3";
-            this.dataGridView3.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView3.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView3.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView3.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView3.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView3.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView3.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn
             // 
@@ -584,10 +584,10 @@
             this.dataGridView4.Size = new System.Drawing.Size(124, 235);
             this.dataGridView4.TabIndex = 6;
             this.dataGridView4.Tag = "4";
-            this.dataGridView4.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView4.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView4.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView4.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView4.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView4.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView4.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn3
             // 
@@ -661,10 +661,10 @@
             this.dataGridView5.Size = new System.Drawing.Size(124, 235);
             this.dataGridView5.TabIndex = 7;
             this.dataGridView5.Tag = "5";
-            this.dataGridView5.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView5.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView5.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView5.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView5.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView5.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView5.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn4
             // 
@@ -738,10 +738,10 @@
             this.dataGridView6.Size = new System.Drawing.Size(124, 235);
             this.dataGridView6.TabIndex = 8;
             this.dataGridView6.Tag = "6";
-            this.dataGridView6.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView6.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView6.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView6.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView6.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView6.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView6.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn5
             // 
@@ -815,10 +815,10 @@
             this.dataGridView7.Size = new System.Drawing.Size(129, 235);
             this.dataGridView7.TabIndex = 9;
             this.dataGridView7.Tag = "0";
-            this.dataGridView7.Enter += new System.EventHandler(this.dataGridView3_Enter);
-            this.dataGridView7.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
-            this.dataGridView7.Leave += new System.EventHandler(this.dataGridView3_Leave);
             this.dataGridView7.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseDoubleClick);
+            this.dataGridView7.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            this.dataGridView7.Enter += new System.EventHandler(this.dataGridView3_Enter);
+            this.dataGridView7.Leave += new System.EventHandler(this.dataGridView3_Leave);
             // 
             // timeDataGridViewTextBoxColumn6
             // 
@@ -1156,6 +1156,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = null;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = this.raspisanieTableAdapter;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = null;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -1178,53 +1179,53 @@
             this.delimTimeToolStripMenuItem});
             this.contextMenuStripCELL.Name = "contextMenuStrip1";
             this.contextMenuStripCELL.ShowImageMargin = false;
-            this.contextMenuStripCELL.Size = new System.Drawing.Size(207, 142);
+            this.contextMenuStripCELL.Size = new System.Drawing.Size(209, 142);
             this.contextMenuStripCELL.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripCELL_Opening);
             // 
             // dayParamToolStripMenuItem
             // 
             this.dayParamToolStripMenuItem.Name = "dayParamToolStripMenuItem";
-            this.dayParamToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.dayParamToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.dayParamToolStripMenuItem.Text = "Параметры этого дня";
             this.dayParamToolStripMenuItem.Click += new System.EventHandler(this.dayParamToolStripMenuItem_Click);
             // 
             // dayChekParamToolStripMenuItem
             // 
             this.dayChekParamToolStripMenuItem.Name = "dayChekParamToolStripMenuItem";
-            this.dayChekParamToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.dayChekParamToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.dayChekParamToolStripMenuItem.Text = "Параметры выбранных дней";
             this.dayChekParamToolStripMenuItem.Click += new System.EventHandler(this.dayChekParamToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(203, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(205, 6);
             // 
             // addZapToolStripMenuItem
             // 
             this.addZapToolStripMenuItem.Name = "addZapToolStripMenuItem";
-            this.addZapToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.addZapToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.addZapToolStripMenuItem.Text = "Добавить запись";
             this.addZapToolStripMenuItem.Click += new System.EventHandler(this.addZapToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.clearToolStripMenuItem.Text = "Очистить запись";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // sumTimeToolStripMenuItem
             // 
             this.sumTimeToolStripMenuItem.Name = "sumTimeToolStripMenuItem";
-            this.sumTimeToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.sumTimeToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.sumTimeToolStripMenuItem.Text = "Объединить время";
             this.sumTimeToolStripMenuItem.Click += new System.EventHandler(this.sumTimeToolStripMenuItem_Click);
             // 
             // delimTimeToolStripMenuItem
             // 
             this.delimTimeToolStripMenuItem.Name = "delimTimeToolStripMenuItem";
-            this.delimTimeToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.delimTimeToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.delimTimeToolStripMenuItem.Text = "Разделить время";
             this.delimTimeToolStripMenuItem.Click += new System.EventHandler(this.delimTimeToolStripMenuItem_Click);
             // 

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
 {
     class CalendarCell : DataGridViewTextBoxCell
-    { public CalendarCell()
-            : base()
+    {
+        public CalendarCell() : base()
         {
             // Use the short date format.
             this.Style.Format = "d";
@@ -51,6 +48,5 @@ namespace DSS
                 return DateTime.Now;
             }
         }
-    
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.ApplicationServices;
 
 namespace DSS
@@ -23,5 +20,4 @@ namespace DSS
             app.Run(Environment.GetCommandLineArgs());
         }
     }
-
 }

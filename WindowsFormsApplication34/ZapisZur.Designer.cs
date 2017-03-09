@@ -185,8 +185,8 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1111, 385);
             this.tabControl1.TabIndex = 1;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
@@ -259,9 +259,9 @@
             this.zurnalDataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.zurnalDataGridView4.Size = new System.Drawing.Size(269, 285);
             this.zurnalDataGridView4.TabIndex = 13;
+            this.zurnalDataGridView4.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             this.zurnalDataGridView4.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDown);
             this.zurnalDataGridView4.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.zurnalDataGridView1_CellMouseEnter);
-            this.zurnalDataGridView4.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             // 
             // data_GridViewTextBoxColumn4
             // 
@@ -309,25 +309,25 @@
             this.toolStripMenuItem3,
             this.addTimeEndToolStripMenuItem});
             this.contextMenuStripGRID.Name = "contextMenuStripGRID";
-            this.contextMenuStripGRID.Size = new System.Drawing.Size(168, 54);
+            this.contextMenuStripGRID.Size = new System.Drawing.Size(166, 54);
             this.contextMenuStripGRID.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripGRID_Opening);
             // 
             // dayParamGRIDToolStripMenuItem
             // 
             this.dayParamGRIDToolStripMenuItem.Name = "dayParamGRIDToolStripMenuItem";
-            this.dayParamGRIDToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.dayParamGRIDToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.dayParamGRIDToolStripMenuItem.Text = "Параметры дня";
             this.dayParamGRIDToolStripMenuItem.Click += new System.EventHandler(this.dayParamToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(162, 6);
             // 
             // addTimeEndToolStripMenuItem
             // 
             this.addTimeEndToolStripMenuItem.Name = "addTimeEndToolStripMenuItem";
-            this.addTimeEndToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.addTimeEndToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.addTimeEndToolStripMenuItem.Text = "Продлить смену";
             this.addTimeEndToolStripMenuItem.Click += new System.EventHandler(this.addTimeEndToolStripMenuItem_Click);
             // 
@@ -375,9 +375,9 @@
             this.zurnalDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.zurnalDataGridView3.Size = new System.Drawing.Size(268, 285);
             this.zurnalDataGridView3.TabIndex = 12;
+            this.zurnalDataGridView3.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             this.zurnalDataGridView3.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDown);
             this.zurnalDataGridView3.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.zurnalDataGridView1_CellMouseEnter);
-            this.zurnalDataGridView3.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             // 
             // data_GridViewTextBoxColumn3
             // 
@@ -457,9 +457,9 @@
             this.zurnalDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.zurnalDataGridView2.Size = new System.Drawing.Size(268, 285);
             this.zurnalDataGridView2.TabIndex = 11;
+            this.zurnalDataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             this.zurnalDataGridView2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDown);
             this.zurnalDataGridView2.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.zurnalDataGridView1_CellMouseEnter);
-            this.zurnalDataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             // 
             // data_GridViewTextBoxColumn2
             // 
@@ -569,9 +569,9 @@
             this.zurnalDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.zurnalDataGridView1.Size = new System.Drawing.Size(268, 285);
             this.zurnalDataGridView1.TabIndex = 0;
+            this.zurnalDataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             this.zurnalDataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDown);
             this.zurnalDataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.zurnalDataGridView1_CellMouseEnter);
-            this.zurnalDataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zurnalDataGridView1_CellMouseDoubleClick);
             // 
             // time_1
             // 
@@ -712,14 +712,14 @@
             this.pasteToolStripMenuItem,
             this.openKartaToolStripMenuItem});
             this.contextMenuStripCELL.Name = "contextMenuStrip1";
-            this.contextMenuStripCELL.Size = new System.Drawing.Size(234, 220);
+            this.contextMenuStripCELL.Size = new System.Drawing.Size(229, 220);
             this.contextMenuStripCELL.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // zapisatToolStripMenuItem
             // 
             this.zapisatToolStripMenuItem.Image = global::DSS.Properties.Resources.script_edit;
             this.zapisatToolStripMenuItem.Name = "zapisatToolStripMenuItem";
-            this.zapisatToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.zapisatToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.zapisatToolStripMenuItem.Text = "Записать";
             this.zapisatToolStripMenuItem.Click += new System.EventHandler(this.zapisatToolStripMenuItem_Click);
             // 
@@ -727,20 +727,20 @@
             // 
             this.delToolStripMenuItem.Image = global::DSS.Properties.Resources.script_delete;
             this.delToolStripMenuItem.Name = "delToolStripMenuItem";
-            this.delToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.delToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.delToolStripMenuItem.Text = "Очистить запись";
             this.delToolStripMenuItem.Click += new System.EventHandler(this.cleanZapisToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(230, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 6);
             // 
             // sumToolStripMenuItem
             // 
             this.sumToolStripMenuItem.Image = global::DSS.Properties.Resources.shape_move_front;
             this.sumToolStripMenuItem.Name = "sumToolStripMenuItem";
-            this.sumToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.sumToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.sumToolStripMenuItem.Text = "Объединить время";
             this.sumToolStripMenuItem.Click += new System.EventHandler(this.sumToolStripMenuItem_Click);
             // 
@@ -748,39 +748,39 @@
             // 
             this.razdelitToolStripMenuItem.Image = global::DSS.Properties.Resources.shape_move_back;
             this.razdelitToolStripMenuItem.Name = "razdelitToolStripMenuItem";
-            this.razdelitToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.razdelitToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.razdelitToolStripMenuItem.Text = "Разделить время";
             this.razdelitToolStripMenuItem.Click += new System.EventHandler(this.razdelitToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(230, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(225, 6);
             // 
             // dayParamToolStripMenuItem
             // 
             this.dayParamToolStripMenuItem.Name = "dayParamToolStripMenuItem";
-            this.dayParamToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.dayParamToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.dayParamToolStripMenuItem.Text = "Параметры дня";
             this.dayParamToolStripMenuItem.Click += new System.EventHandler(this.dayParamToolStripMenuItem_Click);
             // 
             // addTimeEndBegToolStripMenuItem
             // 
             this.addTimeEndBegToolStripMenuItem.Name = "addTimeEndBegToolStripMenuItem";
-            this.addTimeEndBegToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.addTimeEndBegToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.addTimeEndBegToolStripMenuItem.Text = "Продлить смену";
             this.addTimeEndBegToolStripMenuItem.Click += new System.EventHandler(this.addTimeEndToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(230, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(225, 6);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Image = global::DSS.Properties.Resources.cut;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.cutToolStripMenuItem.Text = "Вырезать запись";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
@@ -789,7 +789,7 @@
             this.pasteToolStripMenuItem.Enabled = false;
             this.pasteToolStripMenuItem.Image = global::DSS.Properties.Resources.paste_plain;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.pasteToolStripMenuItem.Text = "Вставить запись";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
@@ -797,7 +797,7 @@
             // 
             this.openKartaToolStripMenuItem.Image = global::DSS.Properties.Resources.user;
             this.openKartaToolStripMenuItem.Name = "openKartaToolStripMenuItem";
-            this.openKartaToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.openKartaToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.openKartaToolStripMenuItem.Text = "Открыть карточку пациента";
             this.openKartaToolStripMenuItem.Visible = false;
             this.openKartaToolStripMenuItem.Click += new System.EventHandler(this.openKartaToolStripMenuItem_Click);
@@ -809,9 +809,9 @@
             this.dateTimePickerMy.Name = "dateTimePickerMy";
             this.dateTimePickerMy.Size = new System.Drawing.Size(148, 20);
             this.dateTimePickerMy.TabIndex = 5;
+            this.dateTimePickerMy.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp);
             this.dateTimePickerMy.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             this.dateTimePickerMy.DropDown += new System.EventHandler(this.dateTimePicker1_DropDown);
-            this.dateTimePickerMy.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp);
             // 
             // buttonDB
             // 
@@ -893,7 +893,7 @@
             this.GrafictoolStripButton.Image = global::DSS.Properties.Resources.clock_edit;
             this.GrafictoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GrafictoolStripButton.Name = "GrafictoolStripButton";
-            this.GrafictoolStripButton.Size = new System.Drawing.Size(112, 22);
+            this.GrafictoolStripButton.Size = new System.Drawing.Size(119, 22);
             this.GrafictoolStripButton.Text = "Графики работы";
             this.GrafictoolStripButton.Click += new System.EventHandler(this.buttonRaspis_Click);
             // 
@@ -909,7 +909,7 @@
             this.toolStripButtonOneDOC.Image = global::DSS.Properties.Resources.user_suit;
             this.toolStripButtonOneDOC.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOneDOC.Name = "toolStripButtonOneDOC";
-            this.toolStripButtonOneDOC.Size = new System.Drawing.Size(142, 22);
+            this.toolStripButtonOneDOC.Size = new System.Drawing.Size(152, 22);
             this.toolStripButtonOneDOC.Text = "по одному сотруднику";
             this.toolStripButtonOneDOC.Click += new System.EventHandler(this.buttonOneDOC_Click);
             // 
@@ -918,7 +918,7 @@
             this.toolStripButtonAllDOC.Image = global::DSS.Properties.Resources.group;
             this.toolStripButtonAllDOC.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonAllDOC.Name = "toolStripButtonAllDOC";
-            this.toolStripButtonAllDOC.Size = new System.Drawing.Size(107, 22);
+            this.toolStripButtonAllDOC.Size = new System.Drawing.Size(112, 22);
             this.toolStripButtonAllDOC.Text = "все сотрудники";
             this.toolStripButtonAllDOC.Click += new System.EventHandler(this.buttonAllDOC_Click);
             // 
@@ -930,7 +930,7 @@
             this.toolStripSplitButtonVid.Image = global::DSS.Properties.Resources.eye;
             this.toolStripSplitButtonVid.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonVid.Name = "toolStripSplitButtonVid";
-            this.toolStripSplitButtonVid.Size = new System.Drawing.Size(58, 22);
+            this.toolStripSplitButtonVid.Size = new System.Drawing.Size(59, 22);
             this.toolStripSplitButtonVid.Text = "Вид";
             this.toolStripSplitButtonVid.Visible = false;
             this.toolStripSplitButtonVid.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
@@ -938,7 +938,7 @@
             // AllTabsToolStripMenuItem
             // 
             this.AllTabsToolStripMenuItem.Name = "AllTabsToolStripMenuItem";
-            this.AllTabsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.AllTabsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.AllTabsToolStripMenuItem.Text = "Развернуть";
             this.AllTabsToolStripMenuItem.Click += new System.EventHandler(this.AllTabsViewToolStripMenuItem_Click);
             // 
@@ -947,7 +947,7 @@
             this.OnScreenToolStripMenuItem.Checked = true;
             this.OnScreenToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.OnScreenToolStripMenuItem.Name = "OnScreenToolStripMenuItem";
-            this.OnScreenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.OnScreenToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.OnScreenToolStripMenuItem.Text = "Уместить на экране";
             this.OnScreenToolStripMenuItem.Click += new System.EventHandler(this.OnScreenToolStripMenuItem_Click);
             // 
@@ -961,7 +961,7 @@
             this.toolStripButtonUpd.Image = global::DSS.Properties.Resources.table_refresh;
             this.toolStripButtonUpd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonUpd.Name = "toolStripButtonUpd";
-            this.toolStripButtonUpd.Size = new System.Drawing.Size(77, 22);
+            this.toolStripButtonUpd.Size = new System.Drawing.Size(81, 22);
             this.toolStripButtonUpd.Text = "Обновить";
             this.toolStripButtonUpd.Click += new System.EventHandler(this.buttonUPD_Click);
             // 
@@ -970,7 +970,7 @@
             this.toolStripButtonCleanToday.Image = global::DSS.Properties.Resources.trash_16;
             this.toolStripButtonCleanToday.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCleanToday.Name = "toolStripButtonCleanToday";
-            this.toolStripButtonCleanToday.Size = new System.Drawing.Size(177, 22);
+            this.toolStripButtonCleanToday.Size = new System.Drawing.Size(186, 22);
             this.toolStripButtonCleanToday.Text = "Очистить журнал до сегодня";
             this.toolStripButtonCleanToday.Click += new System.EventHandler(this.toolStripButtonClean_Click);
             // 
@@ -1059,6 +1059,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = null;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = this.raspisanieTableAdapter;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = null;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -1117,27 +1118,27 @@
             this.toolsToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolsToolStripMenuItem.MergeIndex = 0;
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.toolsToolStripMenuItem.Text = "Действия";
             // 
             // grafikToolStripMenuItem
             // 
             this.grafikToolStripMenuItem.Image = global::DSS.Properties.Resources.clock_edit;
             this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
-            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.grafikToolStripMenuItem.Text = "Графики работы";
             this.grafikToolStripMenuItem.Click += new System.EventHandler(this.buttonRaspis_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(172, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(168, 6);
             // 
             // onePToolStripMenuItem
             // 
             this.onePToolStripMenuItem.Image = global::DSS.Properties.Resources.user_suit;
             this.onePToolStripMenuItem.Name = "onePToolStripMenuItem";
-            this.onePToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.onePToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.onePToolStripMenuItem.Text = "Один сотрудник";
             this.onePToolStripMenuItem.Click += new System.EventHandler(this.buttonOneDOC_Click);
             // 
@@ -1145,20 +1146,20 @@
             // 
             this.allPToolStripMenuItem.Image = global::DSS.Properties.Resources.group;
             this.allPToolStripMenuItem.Name = "allPToolStripMenuItem";
-            this.allPToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.allPToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.allPToolStripMenuItem.Text = "Все сотрудники";
             this.allPToolStripMenuItem.Click += new System.EventHandler(this.buttonAllDOC_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(172, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(168, 6);
             // 
             // updToolStripMenuItem
             // 
             this.updToolStripMenuItem.Image = global::DSS.Properties.Resources.table_refresh;
             this.updToolStripMenuItem.Name = "updToolStripMenuItem";
-            this.updToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.updToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.updToolStripMenuItem.Text = "Обновить";
             this.updToolStripMenuItem.Click += new System.EventHandler(this.buttonUPD_Click);
             // 
@@ -1166,7 +1167,7 @@
             // 
             this.cleanToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanToolStripMenuItem.Name = "cleanToolStripMenuItem";
-            this.cleanToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cleanToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.cleanToolStripMenuItem.Text = "Очистить журнал";
             this.cleanToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonClean_Click);
             // 
@@ -1347,8 +1348,8 @@
             this.Tag = "Запись";
             this.Text = "Запись";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ZapisZur_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ZapisZur_FormClosing);
+            this.Load += new System.EventHandler(this.ZapisZur_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel_1page.ResumeLayout(false);

@@ -164,7 +164,7 @@
             this.toolStripButtonOpenKart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonOpenKart.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOpenKart.Name = "toolStripButtonOpenKart";
-            this.toolStripButtonOpenKart.Size = new System.Drawing.Size(85, 36);
+            this.toolStripButtonOpenKart.Size = new System.Drawing.Size(87, 36);
             this.toolStripButtonOpenKart.Text = "Открыть дело";
             this.toolStripButtonOpenKart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonOpenKart.Click += new System.EventHandler(this.toolStripButtonOpenKart_Click);
@@ -175,7 +175,7 @@
             this.toolStripButtonNewPers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonNewPers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNewPers.Name = "toolStripButtonNewPers";
-            this.toolStripButtonNewPers.Size = new System.Drawing.Size(101, 36);
+            this.toolStripButtonNewPers.Size = new System.Drawing.Size(109, 36);
             this.toolStripButtonNewPers.Text = "Новый сотрудник";
             this.toolStripButtonNewPers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonNewPers.Click += new System.EventHandler(this.toolStripButton33_Click);
@@ -201,7 +201,7 @@
             this.toolStripSplitButtonBD.Image = global::DSS.Properties.Resources.drink;
             this.toolStripSplitButtonBD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonBD.Name = "toolStripSplitButtonBD";
-            this.toolStripSplitButtonBD.Size = new System.Drawing.Size(133, 36);
+            this.toolStripSplitButtonBD.Size = new System.Drawing.Size(141, 36);
             this.toolStripSplitButtonBD.Text = "Скоро день рождения";
             this.toolStripSplitButtonBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripSplitButtonBD.DropDownOpening += new System.EventHandler(this.toolStripSplitButtonBD_DropDownOpening);
@@ -217,7 +217,7 @@
             this.toolStripButtonUpd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonUpd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonUpd.Name = "toolStripButtonUpd";
-            this.toolStripButtonUpd.Size = new System.Drawing.Size(61, 36);
+            this.toolStripButtonUpd.Size = new System.Drawing.Size(65, 36);
             this.toolStripButtonUpd.Text = "Обновить";
             this.toolStripButtonUpd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripButtonUpd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -233,7 +233,7 @@
             this.toolStripButtonOnlyDoc.Image = global::DSS.Properties.Resources.doctor;
             this.toolStripButtonOnlyDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOnlyDoc.Name = "toolStripButtonOnlyDoc";
-            this.toolStripButtonOnlyDoc.Size = new System.Drawing.Size(93, 36);
+            this.toolStripButtonOnlyDoc.Size = new System.Drawing.Size(98, 36);
             this.toolStripButtonOnlyDoc.Text = "Только доктора";
             this.toolStripButtonOnlyDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonOnlyDoc.CheckStateChanged += new System.EventHandler(this.toolStripButtonOnlyDoc_CheckStateChanged);
@@ -245,7 +245,7 @@
             this.toolStripButtonOnlyNODoc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonOnlyNODoc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOnlyNODoc.Name = "toolStripButtonOnlyNODoc";
-            this.toolStripButtonOnlyNODoc.Size = new System.Drawing.Size(70, 36);
+            this.toolStripButtonOnlyNODoc.Size = new System.Drawing.Size(73, 36);
             this.toolStripButtonOnlyNODoc.Text = "Не доктора";
             this.toolStripButtonOnlyNODoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonOnlyNODoc.CheckStateChanged += new System.EventHandler(this.toolStripButtonOnlyNODoc_CheckStateChanged);
@@ -781,13 +781,13 @@
             this.openToolStripMenuItem,
             this.deletToolStripMenuItem});
             this.contextMenuStripGrid.Name = "contextMenuStrip1";
-            this.contextMenuStripGrid.Size = new System.Drawing.Size(160, 48);
+            this.contextMenuStripGrid.Size = new System.Drawing.Size(151, 48);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Image = global::DSS.Properties.Resources.user_go;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.openToolStripMenuItem.Text = "Открыть дело";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -795,7 +795,7 @@
             // 
             this.deletToolStripMenuItem.Image = global::DSS.Properties.Resources.user_delete;
             this.deletToolStripMenuItem.Name = "deletToolStripMenuItem";
-            this.deletToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.deletToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.deletToolStripMenuItem.Text = "Удалить дело";
             this.deletToolStripMenuItem.Click += new System.EventHandler(this.deletToolStripMenuItem_Click);
             // 
@@ -821,6 +821,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = null;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = null;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = null;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -865,27 +866,27 @@
             this.optionsToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.optionsToolStripMenuItem.MergeIndex = 0;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.optionsToolStripMenuItem.Text = "Действия";
             // 
             // newKToolStripMenuItem
             // 
             this.newKToolStripMenuItem.Image = global::DSS.Properties.Resources.user_go;
             this.newKToolStripMenuItem.Name = "newKToolStripMenuItem";
-            this.newKToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.newKToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.newKToolStripMenuItem.Text = "Открыть дело";
             this.newKToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonOpenKart_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 6);
             // 
             // delKToolStripMenuItem
             // 
             this.delKToolStripMenuItem.Image = global::DSS.Properties.Resources.user_add;
             this.delKToolStripMenuItem.Name = "delKToolStripMenuItem";
-            this.delKToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.delKToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.delKToolStripMenuItem.Text = "Новый сотрудник";
             this.delKToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton33_Click);
             // 
@@ -893,20 +894,20 @@
             // 
             this.openKToolStripMenuItem1.Image = global::DSS.Properties.Resources.user_delete;
             this.openKToolStripMenuItem1.Name = "openKToolStripMenuItem1";
-            this.openKToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
+            this.openKToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
             this.openKToolStripMenuItem1.Text = "Удалить дело";
             this.openKToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButtonDel_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(172, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(169, 6);
             // 
             // docOnlyToolStripMenuItem
             // 
             this.docOnlyToolStripMenuItem.Image = global::DSS.Properties.Resources.doctor;
             this.docOnlyToolStripMenuItem.Name = "docOnlyToolStripMenuItem";
-            this.docOnlyToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.docOnlyToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.docOnlyToolStripMenuItem.Text = "Только доктора";
             this.docOnlyToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -914,20 +915,20 @@
             // 
             this.notDocOnlyToolStripMenuItem.Image = global::DSS.Properties.Resources.status_offline;
             this.notDocOnlyToolStripMenuItem.Name = "notDocOnlyToolStripMenuItem";
-            this.notDocOnlyToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.notDocOnlyToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.notDocOnlyToolStripMenuItem.Text = "Не доктора";
             this.notDocOnlyToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(172, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 6);
             // 
             // updToolStripMenuItem
             // 
             this.updToolStripMenuItem.Image = global::DSS.Properties.Resources.table_refresh;
             this.updToolStripMenuItem.Name = "updToolStripMenuItem";
-            this.updToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.updToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.updToolStripMenuItem.Text = "Обновить";
             this.updToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonUpd_Click);
             // 
@@ -971,8 +972,8 @@
             this.Tag = "Personal";
             this.Text = "Персонал";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Personal_Load);
             this.Activated += new System.EventHandler(this.Personal_Activated);
+            this.Load += new System.EventHandler(this.Personal_Load);
             this.toolStripMain.ResumeLayout(false);
             this.toolStripMain.PerformLayout();
             this.toolStripAlfavit.ResumeLayout(false);

@@ -29,7 +29,6 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
@@ -39,7 +38,6 @@ namespace DSS
     static class Program
     {
         [STAThread]
-
         static void Main()
         {
             try
@@ -47,7 +45,6 @@ namespace DSS
                 Application.EnableVisualStyles();
                 SingleInstanceApplication.Run(new MainForm(), StartupNextInstanceHandler);
             }
-
             catch (Exception e)
             {
                 try
@@ -68,18 +65,15 @@ namespace DSS
             e.BringToForeground = true;
         }
 
-
-        public static void Log(String logMessage,String stack, TextWriter w)
+        public static void Log(String logMessage, String stack, TextWriter w)
         {
             w.Write("\r\nERROR : ");
             w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
-                DateTime.Now.ToLongDateString());           
+                DateTime.Now.ToLongDateString());
             w.WriteLine("  :{0}", logMessage);
             w.WriteLine("  :{0}", stack);
             w.WriteLine("-------------------------------");
-                    w.Flush();
+            w.Flush();
         }
-
     }
-
 }

@@ -29,11 +29,6 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -45,24 +40,22 @@ namespace DSS
             InitializeComponent();
         }
 
-
         public string texts = "";
         public string names = "";
 
         private void SpravAddItem_Load(object sender, EventArgs e)
         {
-            richTextBoxParNam .Text= names;
+            richTextBoxParNam.Text = names;
             richTextBoxParTxt.Text = texts;
         }
 
-
-        bool isclose = true;
+        bool isFormClosing = true;
         private void button1_Click(object sender, EventArgs e)
         {
             this.Validate();
-                       if (richTextBoxNewTxt.Text != "" && richTextBoxNewNam.Text != "")
+            if (richTextBoxNewTxt.Text != "" && richTextBoxNewNam.Text != "")
             {
-                isclose = true;
+                isFormClosing = true;
                 ((SpravDS)this.Tag).newNames = richTextBoxNewNam.Text;
                 ((SpravDS)this.Tag).newTexts = richTextBoxNewTxt.Text;
                 if (numericUpDownCena.Visible)
@@ -73,16 +66,16 @@ namespace DSS
             else
             {
                 MessageBox.Show("Название узла и полный текст должны быть указаны.");
-                isclose = false;
+                isFormClosing = false;
             }
         }
 
         private void SpravAddItem_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!isclose)
+            if (!isFormClosing)
             {
                 e.Cancel = true;
-                isclose = true;
+                isFormClosing = true;
             }
         }
 
@@ -95,6 +88,5 @@ namespace DSS
         {
             richTextBoxNewNam.Text = richTextBoxParNam.Text;
         }
-            
     }
 }

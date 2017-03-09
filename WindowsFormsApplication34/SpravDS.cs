@@ -29,12 +29,7 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-//using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -53,14 +48,16 @@ namespace DSS
             this.diagnosisTableAdapter.FillByReal(this.___BASA__DataSet.Diagnosis, true);
             this.obektTableAdapter.FillByReal(this.___BASA__DataSet.Obekt, true);
             this.treatTableAdapter.FillByReal(this.___BASA__DataSet.Treat, true);
-
         }
+
         string filtr = "";
+
         private void FirstTreeNode(DataTable table)
         {
             filtr = "isReal<>FALSE";
             treeView1.Nodes.Clear();
             DataRow[] firstRow = table.Select("ParID=0  AND isReal<>FALSE");
+
             foreach (DataRow f in firstRow)
             {
                 if (f.RowState != DataRowState.Deleted && f.RowState != DataRowState.Detached)
@@ -73,7 +70,6 @@ namespace DSS
                     {
                         if (len == 0)
                         {
-
                             tn = treeView1.Nodes.Add(f["ID"].ToString(), f["Names"].ToString() + " (цена:" + f["Money"].ToString() + ")");
                         }
                         else
@@ -98,7 +94,6 @@ namespace DSS
 
         private void AddTreeNodes(TreeNode tn, DataRow[] secondRow, DataTable table)
         {
-
             foreach (DataRow f in secondRow)
             {
                 if (f.RowState != DataRowState.Deleted && f.RowState != DataRowState.Detached)
@@ -201,7 +196,6 @@ namespace DSS
                 case "Money":
                     e.Column.HeaderText = "Стоимость манипуляции";
                     e.Column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    //   e.Column.e
                     break;
                 case "ID":
                     e.Column.Visible = false;
@@ -213,7 +207,6 @@ namespace DSS
                     e.Column.Visible = false;
                     break;
             }
-
         }
 
         private void toolStripButtonTAB_Click(object sender, EventArgs e)
@@ -246,10 +239,10 @@ namespace DSS
             FirstTreeNode((DataTable)treeView1.Tag);
         }
 
-
         public decimal newCena = 0;
         public string newTexts = "";
         public string newNames = "";
+
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (treeView1.SelectedNode != null)
@@ -260,6 +253,7 @@ namespace DSS
                 sa.texts = ((DataRow)treeView1.SelectedNode.Tag)["Texts"].ToString();
                 sa.names = ((DataRow)treeView1.SelectedNode.Tag)["Names"].ToString();
                 sa.Tag = this;
+
                 switch (tab.TableName)
                 {
                     case "Diagnosis":
@@ -290,7 +284,6 @@ namespace DSS
 
         private void AddRootItem(DataTable tab, int ID)
         {
-
             if (tab == ___BASA__DataSet.Diagnosis)
             {
                 ___BASA__DataSet.Diagnosis.AddDiagnosisRow(ID, newNames, newTexts, true);
@@ -349,7 +342,6 @@ namespace DSS
             treeView1.SelectedNode = e.Node;
         }
 
-
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Focused)
@@ -394,7 +386,6 @@ namespace DSS
             {
                 AddRootItem(tab, ID);
             }
-
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -435,7 +426,6 @@ namespace DSS
                     {
                         ((DataRow)treeView1.SelectedNode.Tag)["Money"] = newCena;
                         treeView1.SelectedNode.Text = newNames + " (цена:" + newCena.ToString() + ")";
-
                     }
                     else
                     {
@@ -456,6 +446,7 @@ namespace DSS
             zalobyBindingSource.EndEdit();
             this.Validate();
             diagnosisTableAdapter.Update(___BASA__DataSet);
+
             try
             {
                 treatTableAdapter.Update(___BASA__DataSet);
@@ -464,6 +455,7 @@ namespace DSS
             {
                 MessageBox.Show(q.Message);
             }
+
             anamnezTableAdapter.Update(___BASA__DataSet);
             obektTableAdapter.Update(___BASA__DataSet);
             zalobyTableAdapter.Update(___BASA__DataSet);
@@ -541,12 +533,12 @@ namespace DSS
             if (dataGridView1.Columns[e.ColumnIndex].DataPropertyName == "Money" && dataGridView1[e.ColumnIndex, e.RowIndex].IsInEditMode)
             {
                 bool b = false;
-                decimal m = (decimal)dataGridView1[e.ColumnIndex, e.RowIndex].Value; ;
+                decimal m = (decimal)dataGridView1[e.ColumnIndex, e.RowIndex].Value;
+
                 try
                 {
                     m = Convert.ToDecimal(dataGridView1[e.ColumnIndex, e.RowIndex].EditedFormattedValue);
                 }
-
                 catch (Exception ex)
                 {
                     b = true;
@@ -554,14 +546,12 @@ namespace DSS
                     e.Cancel = true;
                 }
 
-
                 if (!b)
                 {
                     if (m < 0)
                     {
                         MessageBox.Show("Стоимость не может быть меньше 0.");
                         e.Cancel = true;
-
                     }
                     else if (m > 1000000000000)
                     {
@@ -581,6 +571,5 @@ namespace DSS
         {
             tabtoolStripButton.CheckState = toolStripButtonTAB.CheckState;
         }
-
     }
 }

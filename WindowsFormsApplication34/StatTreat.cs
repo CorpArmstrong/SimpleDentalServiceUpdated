@@ -29,11 +29,9 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -59,14 +57,11 @@ namespace DSS
         string fil_pat = "";
         string fil_tr = "";
 
-
-
         private void StatTreat_Load(object sender, EventArgs e)
         {
             this.statTreatTableAdapter.Fill(this.___BASA__DataSet.StatTreat);
             trsMake();
         }
-
 
         void Fill2(___BASA__DataSet.StatTreatDataTable dataTable)
         {
@@ -77,15 +72,11 @@ namespace DSS
 
             statTreatTableAdapter.Adapter.SelectCommand.CommandText = "SELECT Treat.Texts AS TR, COUNT(TreatTreat.Skolko) AS Many,SUM(Treat.[Money] * TreatTreat.Skolko) AS Suma " + select +
      " FROM         ((Treat RIGHT OUTER JOIN TreatTreat ON Treat.ID = TreatTreat.Treat) LEFT OUTER JOIN  ((Patients RIGHT OUTER JOIN Posesenie ON Patients.PID = Posesenie.Patient) LEFT OUTER JOIN  Personal ON Posesenie.Personal = Personal.DID) ON TreatTreat.Posesenie = Posesenie.ID) " +
-     " GROUP BY Treat.Texts " + group
-                                      ;
-
+     " GROUP BY Treat.Texts " + group;
 
             dataTable.Clear();
-
             statTreatTableAdapter.Adapter.Fill(dataTable);
         }
-
 
         private void toolStripButtonBUILD_Click(object sender, EventArgs e)
         {
@@ -128,7 +119,6 @@ namespace DSS
                 toolStripButtonFiltrDOC.Visible = DFIO.Visible = false;
                 CheckDrs = new string[0]; drs = new string[0]; fil_doc = "";
             }
-
 
             if (toolStripButtonPAT.Checked)
             {
@@ -173,7 +163,6 @@ namespace DSS
                 {
                     Texts.DataPropertyName = dc.ColumnName;
                 }
-
             }
             statDiagnosisDataGridView.Focus();
             FILTR();
@@ -286,7 +275,6 @@ namespace DSS
             }
         }
 
-
         void list_DisposedDOC(object sender, EventArgs e)
         {
             DOCclosing(sender); ;
@@ -342,14 +330,11 @@ namespace DSS
                     fil_pat += ")";
                 }
                 i++;
-
             }
             ((CheckedListBox)sender).Dispose();
             toolStripButtonFiltrPAT.Tag = null;
             FILTR();
-
         }
-
 
         private void TRclosing(object sender)
         {
@@ -373,12 +358,10 @@ namespace DSS
                     fil_tr += ")";
                 }
                 i++;
-
             }
             ((CheckedListBox)sender).Dispose();
             toolStripButtonFiltrTR.Tag = null;
             FILTR();
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -471,9 +454,8 @@ namespace DSS
 
         private void toolStripButtonDATA_Click(object sender, EventArgs e)
         {
-            toolStripButtonBUILD.BackColor = Color.Azure;// SystemColors.InactiveCaption;
+            toolStripButtonBUILD.BackColor = Color.Azure;
         }
-
 
         private void statDiagnosisDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -492,7 +474,6 @@ namespace DSS
                         list.KeyDown += new KeyEventHandler(list_KeyDownDOC);
                         list.GotFocus += new EventHandler(list_GotFocusDOC);
                     }
-
                     else if (statDiagnosisDataGridView.Columns[e.ColumnIndex] == PFIO)
                     {
                         list.Leave += new EventHandler(list_LostFocusPAT);
@@ -532,7 +513,6 @@ namespace DSS
                 }
             }
         }
-
 
         private void toolStripButtonFiltrTR_Click(object sender, EventArgs e)
         {
@@ -597,7 +577,6 @@ namespace DSS
             }
             else
             {
-
                 statDiagnosisDataGridView.Focus();
             }
         }
@@ -648,7 +627,7 @@ namespace DSS
             {
                 int x = toolStripFILTR.Location.X + toolStripButtonFiltrPAT.Bounds.Location.X;
                 int y = toolStripFILTR.Location.Y + toolStripButtonFiltrPAT.Bounds.Location.Y + toolStripButtonFiltrPAT.Height;
-                CheckedListBox list = listParam(ref x, y);// new CheckedListBox();
+                CheckedListBox list = listParam(ref x, y);
                 toolStripButtonFiltrPAT.Tag = list;
                 list.Leave += new EventHandler(list_LostFocusPAT);
                 list.KeyDown += new KeyEventHandler(list_KeyDownPAT);
@@ -662,6 +641,5 @@ namespace DSS
                 statDiagnosisDataGridView.Focus();
             }
         }
-
     }
 }

@@ -29,11 +29,7 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -44,7 +40,6 @@ namespace DSS
         {
             InitializeComponent();
         }
-
 
         string filterAZ = "";
         string filterDoc = "";
@@ -116,7 +111,6 @@ namespace DSS
                 personalBindingSource.RemoveFilter();
             }
         }
-
 
         void openDelo(DataRowView curent)
         {

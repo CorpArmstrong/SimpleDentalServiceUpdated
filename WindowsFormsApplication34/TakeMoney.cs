@@ -29,11 +29,6 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -56,64 +51,64 @@ namespace DSS
         public string PFIO;
 
         private void TakeMoney_Load(object sender, EventArgs e)
-      {
-          numericUpDown1.Maximum = decimal.MaxValue;
-          labelPFIO0. Text+= PFIO;
-          if ((string)this.Tag == "take")// "Прием Предоплаты"
-          {
-              labelPay.Text = "Предоплата :";
-              labelPFIO0.Text = PFIO;
-              labelDolg.Visible=false;
-          }
-          if ((string)this.Tag == "pred")//"Возврат Предоплаты"
-          {
-              labelDolg.Text += dolgSumma.ToString();
-              labelPFIO0.Text = PFIO;
-              labelDolg.Text = "Предоплата : " + dolgSumma;
-              labelPay.Text = "Возвращаем :";
-              numericUpDown1.Enabled = false;
-              numericUpDown1.Value = dolgSumma;
-          }
-          if ((string)this.Tag == "pay1")//"Оплата Долга";
-          {
-              dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
-              dolgSumma = dolgRow.dolg;
-           labelDolg   .Text += dolgSumma.ToString();
-          }
-          if ((string)this.Tag == "pay0")//"СПИСАНИЕ ДОЛГА"
-          {
-              dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
-              dolgSumma = dolgRow.dolg;
-              labelDolg.Text += dolgSumma.ToString();
-              numericUpDown1.Maximum = dolgSumma;
-              labelPay.Text = "Прощаем";
-          }
-          if ((string)this.Tag == "payAll")//"Оплата Долгов"
-          {
-              labelDolg.Text += dolgSumma.ToString();
-              numericUpDown1.Maximum = dolgSumma;
-              numericUpDown1.Minimum = dolgSumma;
-          }
-          if ((string)this.Tag == "from")//"Списание Долга из Предоплаты"
-          {
-              dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
-              dolgSumma = dolgRow.dolg;
-              labelDolg.Text += dolgSumma.ToString();
-              labelPred.Text += predSumma.ToString();
-              labelPred.Visible = true;
-              if (dolgSumma > predSumma)
-              {                 
-                  numericUpDown1.Maximum =dolgSumma- predSumma;
-                  labelPay.Text = "Доплата :";
-              }
-              else if (dolgSumma <= predSumma)
-              {
-                  numericUpDown1.Value = predSumma - dolgSumma;
-                  numericUpDown1.Enabled = false;
-                  labelPay.Text = "Остаток предоплаты :";
-              }            
-          }
-      }
+        {
+            numericUpDown1.Maximum = decimal.MaxValue;
+            labelPFIO0.Text += PFIO;
+            if ((string)this.Tag == "take")// "Прием Предоплаты"
+            {
+                labelPay.Text = "Предоплата :";
+                labelPFIO0.Text = PFIO;
+                labelDolg.Visible = false;
+            }
+            if ((string)this.Tag == "pred")//"Возврат Предоплаты"
+            {
+                labelDolg.Text += dolgSumma.ToString();
+                labelPFIO0.Text = PFIO;
+                labelDolg.Text = "Предоплата : " + dolgSumma;
+                labelPay.Text = "Возвращаем :";
+                numericUpDown1.Enabled = false;
+                numericUpDown1.Value = dolgSumma;
+            }
+            if ((string)this.Tag == "pay1")//"Оплата Долга";
+            {
+                dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
+                dolgSumma = dolgRow.dolg;
+                labelDolg.Text += dolgSumma.ToString();
+            }
+            if ((string)this.Tag == "pay0")//"СПИСАНИЕ ДОЛГА"
+            {
+                dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
+                dolgSumma = dolgRow.dolg;
+                labelDolg.Text += dolgSumma.ToString();
+                numericUpDown1.Maximum = dolgSumma;
+                labelPay.Text = "Прощаем";
+            }
+            if ((string)this.Tag == "payAll")//"Оплата Долгов"
+            {
+                labelDolg.Text += dolgSumma.ToString();
+                numericUpDown1.Maximum = dolgSumma;
+                numericUpDown1.Minimum = dolgSumma;
+            }
+            if ((string)this.Tag == "from")//"Списание Долга из Предоплаты"
+            {
+                dolgRow = dolgTableAdapter.GetDataBy1(dolgOneID)[0];
+                dolgSumma = dolgRow.dolg;
+                labelDolg.Text += dolgSumma.ToString();
+                labelPred.Text += predSumma.ToString();
+                labelPred.Visible = true;
+                if (dolgSumma > predSumma)
+                {
+                    numericUpDown1.Maximum = dolgSumma - predSumma;
+                    labelPay.Text = "Доплата :";
+                }
+                else if (dolgSumma <= predSumma)
+                {
+                    numericUpDown1.Value = predSumma - dolgSumma;
+                    numericUpDown1.Enabled = false;
+                    labelPay.Text = "Остаток предоплаты :";
+                }
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -122,7 +117,7 @@ namespace DSS
             {
                 if (numericUpDown1.Value != 0)
                 {
-                    if (MessageBox.Show("Внесена предоплата : " + numericUpDown1.Value.ToString()+".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    if (MessageBox.Show("Внесена предоплата : " + numericUpDown1.Value.ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         predoplataTA.Insert(numericUpDown1.Value, DateTime.Now, PID);
                         plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "предоплата");
@@ -141,7 +136,7 @@ namespace DSS
             {
                 if (dolgSumma >= predSumma && numericUpDown1.Value + predSumma == dolgSumma)
                 {
-                    if (MessageBox.Show("Долг полностью погашен.\rОстаток предоплаты : 0.\rДоплачено : " + numericUpDown1.Value .ToString()+".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    if (MessageBox.Show("Долг полностью погашен.\rОстаток предоплаты : 0.\rДоплачено : " + numericUpDown1.Value.ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         dolgTableAdapter.Delete(dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
                         if (numericUpDown1.Value != 0)
@@ -155,13 +150,13 @@ namespace DSS
                         }
                     }
                     else
-                    { close = false; }
-                   
-
+                    {
+                        close = false;
+                    }
                 }
                 else if (dolgSumma > predSumma && numericUpDown1.Value + predSumma < dolgSumma)
                 {
-                    if (MessageBox.Show("Долг погашен не полностью.\rДоплачено : " + numericUpDown1.Value .ToString()+ ".\rОстаток предоплаты : 0.\rОстаток долга : " + (dolgSumma - (numericUpDown1.Value + predSumma)).ToString()+".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    if (MessageBox.Show("Долг погашен не полностью.\rДоплачено : " + numericUpDown1.Value.ToString() + ".\rОстаток предоплаты : 0.\rОстаток долга : " + (dolgSumma - (numericUpDown1.Value + predSumma)).ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         for (int i = 0; i < dolgManyIDS.Length; i++)
                         {
@@ -173,15 +168,16 @@ namespace DSS
                         {
                             plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
                         }
-
                     }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
 
                 else if (dolgSumma < predSumma)
                 {
-                    if (MessageBox.Show("Долг полностью погашен.\rОстаток предоплаты : " + (predSumma-dolgSumma).ToString()+".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    if (MessageBox.Show("Долг полностью погашен.\rОстаток предоплаты : " + (predSumma - dolgSumma).ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         dolgTableAdapter.DeleteQueryByID(dolgRow.ID);
                         for (int i = 0; i < dolgManyIDS.Length; i++)
@@ -190,10 +186,11 @@ namespace DSS
                         }
                         predoplataTA.Insert(predSumma - dolgSumma, DateTime.Now, PID);
                         plataTableAdapter1.Insert(dolgSumma, PID, textBox1.Text, DateTime.Now, "учет предоплаты");
-
                     }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
             }
 
@@ -206,7 +203,6 @@ namespace DSS
                     {
                         plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
                     }
-
                 }
                 if (numericUpDown1.Value > dolgSumma)
                 {
@@ -218,7 +214,9 @@ namespace DSS
                         predoplataTA.Insert(numericUpDown1.Value - dolgSumma, DateTime.Now, PID);
                     }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
 
                 if (numericUpDown1.Value < dolgSumma)
@@ -230,9 +228,11 @@ namespace DSS
                         {
                             plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
                         }
-                    } 
+                    }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
             }
 
@@ -241,11 +241,8 @@ namespace DSS
                 if (numericUpDown1.Value == dolgSumma)
                 {
                     dolgTableAdapter.DeleteQueryByID(dolgRow.ID);
-                 //  
                     plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "списание долга");
-
                 }
-                              
 
                 if (numericUpDown1.Value < dolgSumma)
                 {
@@ -256,19 +253,20 @@ namespace DSS
                         {
                             plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "списание долга");
                         }
-                    } 
+                    }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
             }
             else if ((string)this.Tag == "payAll")//"Оплата Долгов"
             {
-                if (MessageBox.Show("Остаток долга : 0.\rОплачено : " + numericUpDown1.Value .ToString()+".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Остаток долга : 0.\rОплачено : " + numericUpDown1.Value.ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     for (int i = 0; i < dolgManyIDS.Length; i++)
                     {
                         dolgTableAdapter.DeleteQueryByID(dolgManyIDS[i]);
-                        
                     }
                     if (numericUpDown1.Value != 0)
                     {
@@ -299,7 +297,5 @@ namespace DSS
         {
             this.Close();
         }
-
-       
     }
 }
