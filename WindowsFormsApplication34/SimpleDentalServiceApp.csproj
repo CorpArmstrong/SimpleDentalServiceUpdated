@@ -55,7 +55,8 @@
     <PlatformTarget>anycpu</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
+    <DebugType>
+    </DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -89,7 +90,7 @@
     <Compile Include="AddTime.Designer.cs">
       <DependentUpon>AddTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="SingleInstanceApplication.cs" />
     <Compile Include="dayParam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,7 +237,6 @@
     </Compile>
     <Compile Include="___BASA__DataSet.cs">
       <DependentUpon>___BASA__DataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="PatientsForm.cs">
       <SubType>Form</SubType>

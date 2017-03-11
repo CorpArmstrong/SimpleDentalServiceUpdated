@@ -29,11 +29,6 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -44,14 +39,13 @@ namespace DSS
         {
             InitializeComponent();
         }
+
         public DateTime startTime = new DateTime();
         DateTime secondTime = new DateTime();
         public int periodDefault = 0;
 
-
         private void DelimVremya1_Load(object sender, EventArgs e)
         {
-
             textBoxT1S.Text = startTime.ToShortTimeString();
             dateTimePickerT2S.MinDate = dateTimePickerT2S.Value = secondTime = startTime;
             numericUpDownT2Per.Value = numericUpDownT2Per.Maximum = numericUpDownT1Per.Maximum = trackBarMy.Maximum = periodDefault;
@@ -99,7 +93,6 @@ namespace DSS
             }
             else
             {
-
                 this.DialogResult = DialogResult.No;
             }
         }

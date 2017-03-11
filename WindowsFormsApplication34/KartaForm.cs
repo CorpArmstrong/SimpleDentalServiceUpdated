@@ -139,7 +139,6 @@ namespace DSS
                 cmdNewID.Transaction = patientsProfessiaTableAdapter.Transaction;  // Retrieve the Autonumber and store it in the CategoryID column.
 
                 ((___BASA__DataSet.PatientsProfessiaRow)e.Row).ProfessiaID = (int)cmdNewID.ExecuteScalar();
-
             }
         }
 
@@ -151,7 +150,6 @@ namespace DSS
                 cmdNewID.Transaction = patientsRabotaTableAdapter.Transaction;  // Retrieve the Autonumber and store it in the CategoryID column.
 
                 ((___BASA__DataSet.PatientsRabotaRow)e.Row).ID = (int)cmdNewID.ExecuteScalar();
-
             }
         }
 
@@ -175,11 +173,8 @@ namespace DSS
                 cmdNewID.Transaction = ulizaTableAdapter.Transaction;  // Retrieve the Autonumber and store it in the CategoryID column.
 
                 ((___BASA__DataSet.UlizaRow)e.Row).UlizaID = (int)cmdNewID.ExecuteScalar();
-
             }
         }
-
-
 
         private bool isKartaNotDel()
         {
@@ -211,7 +206,6 @@ namespace DSS
 
         private void loadPatientKarta()
         {
-
             patientsTableAdapter.FillBy(___BASA__DataSet.Patients, PID);
             ___BASA__DataSet.PatientsRow PatRow = ___BASA__DataSet.Patients[0];
             this.Text = "Карточка: " + PatRow.PFIO;
@@ -222,20 +216,17 @@ namespace DSS
             else
             {
                 ulizaBindingSource.Position = ulizaBindingSource.Find("UlizaID", 1);
-
             }
 
             if (!PatRow.IsGorodNull())
             {
                 oblastBindingSource.Position = oblastBindingSource.Find("OblastID", ___BASA__DataSet.Gorod.FindByGorodID((int)PatRow.Gorod).Oblast);
                 gorodBindingSource.Position = gorodBindingSource.Find("GorodID", PatRow.Gorod);
-
             }
             else
             {
                 oblastBindingSource.Position = oblastBindingSource.Find("OblastID", 1);
                 gorodBindingSource.Position = gorodBindingSource.Find("GorodID", 1);
-
             }
             if (!PatRow.IsRabotaNull())
             {
@@ -244,7 +235,6 @@ namespace DSS
             else
             {
                 patientsRabotaBindingSource.Position = patientsRabotaBindingSource.Find("ID", 2);
-
             }
             if (!PatRow.IsSexNull())
             {
@@ -313,8 +303,6 @@ namespace DSS
             box.ForeColor = Color.MidnightBlue;
         }
 
-
-
         void box_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
             if (((RichTextBox)sender).Height != e.NewRectangle.Height)
@@ -322,8 +310,6 @@ namespace DSS
                 ((RichTextBox)sender).Height = e.NewRectangle.Height;
             }
         }
-
-
 
         private void History()
         {
@@ -333,7 +319,6 @@ namespace DSS
                 lbDate.Text = ((DateTime)dr["Data"]).ToLongDateString() + " " + ((DateTime)dr["Data"]).ToShortTimeString();
                 lbDate.LinkColor = Color.Red;
                 addLabelControl(lbDate);
-
 
                 Label doctor = new Label();
                 doctor.Text = "Врач- " + dr["DFIO"].ToString();
@@ -379,7 +364,6 @@ namespace DSS
                 tr.Text = "Лечение";
                 addLabelControl(tr);
 
-
                 RichTextBox trText = new RichTextBox();
                 richBoxParam(trText);
                 trText.Text = dr["Treat"].ToString();
@@ -389,7 +373,6 @@ namespace DSS
                 befor.Height = 25;
                 richBoxParam(befor);
                 addRichControl(befor);
-
             }
         }
 
@@ -414,7 +397,6 @@ namespace DSS
             saveToolStripMenuItem.Enabled = chengToolStripMenuItem.Enabled =
 
              toolStripButton_Save.Enabled = toolStripButton_change.Enabled = false;
-
         }
 
         private int Vozrast(DateTime bd)
@@ -499,7 +481,6 @@ namespace DSS
         private void comboBoxObl_TextChanged(object sender, EventArgs e)
         {
             saveToolStripMenuItem.Enabled = toolStripButton_Save.Enabled = true;
-
         }
 
         private void toolStripButton_change_Click(object sender, EventArgs e)
@@ -513,7 +494,6 @@ namespace DSS
             bool blRab = false;
             foreach (DataRow dr in patientsRabotaTableAdapter.GetData().Rows)
             {
-
                 if (dr["Rabota"].ToString() == rab)
                 {
                     blRab = true;
@@ -543,8 +523,6 @@ namespace DSS
                 ___BASA__DataSet.Uliza.AddUlizaRow(ulica);
                 ulizaTableAdapter.Update(___BASA__DataSet.Uliza);
                 ulizaBindingSource.Position = ulizaBindingSource.Find("Uliza", ulica);
-
-
             }
             /////////////////////////////////////////////////////////////////////////          ////////////
             string prof = comboBoxProf.Text;
@@ -562,7 +540,6 @@ namespace DSS
                 ___BASA__DataSet.PatientsProfessia.AddPatientsProfessiaRow(prof);
                 patientsProfessiaTableAdapter.Update(___BASA__DataSet.PatientsProfessia);
                 patientsProfessiaBindingSource.Position = patientsProfessiaBindingSource.Find("Professia", prof);
-
             }
             /////////////////////////////////////////////////////////////////////////////////////////////////
             string gor = comboBoxGorod.Text;
@@ -591,7 +568,6 @@ namespace DSS
                 oblastBindingSource.Position = oblastBindingSource.Find("Oblast", obl);
 
                 gorodBindingSource.Position = gorodBindingSource.Find("Gorod", gor);
-
             }
             else
             {
@@ -656,6 +632,7 @@ namespace DSS
             return da;
         }
 
+        // CorpArmstrong TODO: Implement Picture Galeery instead of simple photo placeholder!
         private void TakePhoto_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -663,16 +640,13 @@ namespace DSS
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     pictureBoxPhoto.ImageLocation = openFileDialog1.FileName;
-
                     saveToolStripMenuItem.Enabled = toolStripDropDownButtonZUMM.Enabled = toolStripButton_Save.Enabled = true;
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, this.Text);
             }
-
         }
 
         private void toolStripButtonPrint_Click(object sender, EventArgs e)
@@ -686,7 +660,6 @@ namespace DSS
                 MessageBox.Show(er.Message, "Ошибка печати", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
 
         void Pagesetup_Click(object sender, EventArgs e)
         {
@@ -765,7 +738,9 @@ namespace DSS
                 }
 
                 if (!done)
-                { break; }
+                {
+                    break;
+                }
                 else
                 {
                     reload = (int)e.Graphics.MeasureString("\n\n\n", mainF, wights).Height + 1;
@@ -803,7 +778,6 @@ namespace DSS
         {
             zoom((ToolStripMenuItem)sender);
             pictureBoxPhoto.SizeMode = PictureBoxSizeMode.Normal;
-
         }
 
         void zoom(ToolStripMenuItem item)
@@ -811,16 +785,16 @@ namespace DSS
             foreach (ToolStripMenuItem chItem in toolStripDropDownButtonZUMM.DropDownItems)
             {
                 chItem.Checked = false;
-
             }
             item.Checked = true;
         }
 
         private void oblastBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-
             if (((DataRowView)oblastBindingSource.Current) != null)
-            { gorodBindingSource.Filter = "Oblast=" + ((DataRowView)oblastBindingSource.Current)["OblastID"].ToString(); }
+            {
+                gorodBindingSource.Filter = "Oblast=" + ((DataRowView)oblastBindingSource.Current)["OblastID"].ToString();
+            }
         }
 
         private void toolStripButtonNewTreat_Click(object sender, EventArgs e)
@@ -887,7 +861,6 @@ namespace DSS
             updateHistory();
         }
 
-
         string[][] Big;
 
         private void printDocument_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
@@ -945,8 +918,6 @@ namespace DSS
             saveToolStripMenuItem.Enabled = toolStripButton_Save.Enabled = true;
         }
 
-
-
         private void pictureBoxPhoto_LoadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             pictureBoxPhoto.DataBindings[0].WriteValue();
@@ -978,6 +949,5 @@ namespace DSS
                 }
             }
         }
-
     }
 }

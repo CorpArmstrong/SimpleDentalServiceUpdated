@@ -103,6 +103,10 @@
             this.panelPHOTO = new System.Windows.Forms.Panel();
             this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.toolStripPhoto = new System.Windows.Forms.ToolStrip();
+            this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelHistory = new System.Windows.Forms.Panel();
+            this.toolStrip_page2 = new System.Windows.Forms.ToolStrip();
             this.TakePhototoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButtonZUMM = new System.Windows.Forms.ToolStripDropDownButton();
             this.zoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,14 +114,10 @@
             this.centerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButtonDelPhoto = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_change = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Save = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonNewTreat = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonMoney = new System.Windows.Forms.ToolStripButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panelHistory = new System.Windows.Forms.Panel();
-            this.toolStrip_page2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonPrint = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_UpdHist = new System.Windows.Forms.ToolStripButton();
             this.label_reg = new System.Windows.Forms.Label();
@@ -181,10 +181,7 @@
             this.panel1.SuspendLayout();
             this.panelPHOTO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
-            this.toolStripPhoto.SuspendLayout();
-            this.toolStripMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.toolStrip_page2.SuspendLayout();
             this.panelCaption.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -241,7 +238,7 @@
             this.tableLayoutPanelInfo.Controls.Add(this.groupBox_persDan, 0, 1);
             this.tableLayoutPanelInfo.Controls.Add(this.panelPHOTO, 2, 1);
             this.tableLayoutPanelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelInfo.Location = new System.Drawing.Point(3, 39);
+            this.tableLayoutPanelInfo.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanelInfo.Name = "tableLayoutPanelInfo";
             this.tableLayoutPanelInfo.RowCount = 5;
             this.tableLayoutPanelInfo.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -249,7 +246,7 @@
             this.tableLayoutPanelInfo.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanelInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelInfo.Size = new System.Drawing.Size(1046, 507);
+            this.tableLayoutPanelInfo.Size = new System.Drawing.Size(1046, 518);
             this.tableLayoutPanelInfo.TabIndex = 2;
             // 
             // labelPhoto
@@ -1088,7 +1085,7 @@
             this.pictureBoxPhoto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxPhoto.Location = new System.Drawing.Point(15, 15);
             this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(224, 298);
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(264, 298);
             this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPhoto.TabIndex = 2;
             this.pictureBoxPhoto.TabStop = false;
@@ -1100,11 +1097,58 @@
             this.toolStripPhoto.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStripPhoto.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripPhoto.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.toolStripPhoto.Location = new System.Drawing.Point(239, 15);
+            this.toolStripPhoto.Location = new System.Drawing.Point(279, 15);
             this.toolStripPhoto.Name = "toolStripPhoto";
-            this.toolStripPhoto.Size = new System.Drawing.Size(66, 298);
+            this.toolStripPhoto.Size = new System.Drawing.Size(26, 298);
             this.toolStripPhoto.TabIndex = 3;
             this.toolStripPhoto.Text = "toolStrip2";
+            // 
+            // toolStripMain
+            // 
+            this.toolStripMain.BackColor = System.Drawing.Color.LightBlue;
+            this.toolStripMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripMain.Location = new System.Drawing.Point(3, 3);
+            this.toolStripMain.Name = "toolStripMain";
+            this.toolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripMain.Size = new System.Drawing.Size(1046, 25);
+            this.toolStripMain.TabIndex = 23;
+            this.toolStripMain.Text = "toolStrip3";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.AutoScrollMargin = new System.Drawing.Size(200, 200);
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabPage2.Controls.Add(this.panelHistory);
+            this.tabPage2.Controls.Add(this.toolStrip_page2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1052, 549);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Информация о лечении";
+            // 
+            // panelHistory
+            // 
+            this.panelHistory.AutoScroll = true;
+            this.panelHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHistory.Location = new System.Drawing.Point(3, 28);
+            this.panelHistory.Name = "panelHistory";
+            this.panelHistory.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panelHistory.Size = new System.Drawing.Size(1046, 518);
+            this.panelHistory.TabIndex = 1;
+            this.panelHistory.Resize += new System.EventHandler(this.panelHistory_Resize);
+            // 
+            // toolStrip_page2
+            // 
+            this.toolStrip_page2.BackColor = System.Drawing.Color.LightBlue;
+            this.toolStrip_page2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip_page2.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip_page2.Name = "toolStrip_page2";
+            this.toolStrip_page2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip_page2.Size = new System.Drawing.Size(1046, 25);
+            this.toolStrip_page2.TabIndex = 0;
+            this.toolStrip_page2.Text = "toolStrip4";
             // 
             // TakePhototoolStripButton
             // 
@@ -1142,7 +1186,7 @@
             this.zoomToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.zoomToolStripMenuItem.Image = global::DSS.Properties.Resources.arrow_inout;
             this.zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.zoomToolStripMenuItem.Text = "Подогнать размер";
             this.zoomToolStripMenuItem.Click += new System.EventHandler(this.zoomToolStripMenuItem_Click);
             // 
@@ -1150,7 +1194,7 @@
             // 
             this.strechToolStripMenuItem.Image = global::DSS.Properties.Resources.arrow_out;
             this.strechToolStripMenuItem.Name = "strechToolStripMenuItem";
-            this.strechToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.strechToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.strechToolStripMenuItem.Text = "Растянуть";
             this.strechToolStripMenuItem.Click += new System.EventHandler(this.strechToolStripMenuItem_Click);
             // 
@@ -1158,7 +1202,7 @@
             // 
             this.centerToolStripMenuItem.Image = global::DSS.Properties.Resources.arrow_in;
             this.centerToolStripMenuItem.Name = "centerToolStripMenuItem";
-            this.centerToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.centerToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.centerToolStripMenuItem.Text = "Центрировать";
             this.centerToolStripMenuItem.Click += new System.EventHandler(this.centerToolStripMenuItem_Click);
             // 
@@ -1166,7 +1210,7 @@
             // 
             this.normalToolStripMenuItem.Image = global::DSS.Properties.Resources.shape_handles;
             this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.normalToolStripMenuItem.Text = "Истинный размер";
             this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
             // 
@@ -1181,17 +1225,6 @@
             this.toolStripButtonDelPhoto.Text = "Удалить";
             this.toolStripButtonDelPhoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonDelPhoto.Click += new System.EventHandler(this.toolStripButtonDelPhoto_Click);
-            // 
-            // toolStripMain
-            // 
-            this.toolStripMain.BackColor = System.Drawing.Color.LightBlue;
-            this.toolStripMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripMain.Location = new System.Drawing.Point(3, 3);
-            this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripMain.Size = new System.Drawing.Size(1046, 36);
-            this.toolStripMain.TabIndex = 23;
-            this.toolStripMain.Text = "toolStrip3";
             // 
             // toolStripButton_change
             // 
@@ -1240,42 +1273,6 @@
             this.toolStripButtonMoney.Text = "Кредитная история";
             this.toolStripButtonMoney.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonMoney.Click += new System.EventHandler(this.toolStripButtonMoney_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScrollMargin = new System.Drawing.Size(200, 200);
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tabPage2.Controls.Add(this.panelHistory);
-            this.tabPage2.Controls.Add(this.toolStrip_page2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1052, 549);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Информация о лечении";
-            // 
-            // panelHistory
-            // 
-            this.panelHistory.AutoScroll = true;
-            this.panelHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHistory.Location = new System.Drawing.Point(3, 39);
-            this.panelHistory.Name = "panelHistory";
-            this.panelHistory.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panelHistory.Size = new System.Drawing.Size(1046, 507);
-            this.panelHistory.TabIndex = 1;
-            this.panelHistory.Resize += new System.EventHandler(this.panelHistory_Resize);
-            // 
-            // toolStrip_page2
-            // 
-            this.toolStrip_page2.BackColor = System.Drawing.Color.LightBlue;
-            this.toolStrip_page2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip_page2.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip_page2.Name = "toolStrip_page2";
-            this.toolStrip_page2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip_page2.Size = new System.Drawing.Size(1046, 36);
-            this.toolStrip_page2.TabIndex = 0;
-            this.toolStrip_page2.Text = "toolStrip4";
             // 
             // toolStripButtonPrint
             // 
@@ -1435,6 +1432,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = this.posesenieTableAdapter;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = null;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = this.sexTableAdapter;
             this.tableAdapterManager.TreatDSTableAdapter = this.treatDSTableAdapter;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -1488,8 +1486,8 @@
             // 
             // printDocument
             // 
-            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
             this.printDocument.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument_BeginPrint);
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
             // 
             // pageSetupDialog
             // 
@@ -1526,7 +1524,7 @@
             this.toolsToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolsToolStripMenuItem.MergeIndex = 0;
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.toolsToolStripMenuItem.Text = "Действия";
             // 
             // aboutPATToolStripMenuItem
@@ -1537,7 +1535,7 @@
             this.newTRToolStripMenuItem,
             this.moneyToolStripMenuItem});
             this.aboutPATToolStripMenuItem.Name = "aboutPATToolStripMenuItem";
-            this.aboutPATToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.aboutPATToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.aboutPATToolStripMenuItem.Text = "О пациенте";
             // 
             // chengToolStripMenuItem
@@ -1545,7 +1543,7 @@
             this.chengToolStripMenuItem.Enabled = false;
             this.chengToolStripMenuItem.Image = global::DSS.Properties.Resources.table_edit;
             this.chengToolStripMenuItem.Name = "chengToolStripMenuItem";
-            this.chengToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.chengToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.chengToolStripMenuItem.Text = "Изменить";
             this.chengToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_change_Click);
             // 
@@ -1554,7 +1552,7 @@
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Image = global::DSS.Properties.Resources.disk;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.saveToolStripMenuItem.Text = "Сохранить";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_Save_Click);
             // 
@@ -1563,7 +1561,7 @@
             this.newTRToolStripMenuItem.Enabled = false;
             this.newTRToolStripMenuItem.Image = global::DSS.Properties.Resources.cart_add;
             this.newTRToolStripMenuItem.Name = "newTRToolStripMenuItem";
-            this.newTRToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.newTRToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.newTRToolStripMenuItem.Text = "Новое лечение";
             this.newTRToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonNewTreat_Click);
             // 
@@ -1572,7 +1570,7 @@
             this.moneyToolStripMenuItem.Enabled = false;
             this.moneyToolStripMenuItem.Image = global::DSS.Properties.Resources.money;
             this.moneyToolStripMenuItem.Name = "moneyToolStripMenuItem";
-            this.moneyToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.moneyToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.moneyToolStripMenuItem.Text = "Кредитная история";
             this.moneyToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonMoney_Click);
             // 
@@ -1582,14 +1580,14 @@
             this.printToolStripMenuItem,
             this.updToolStripMenuItem});
             this.aboutTRToolStripMenuItem.Name = "aboutTRToolStripMenuItem";
-            this.aboutTRToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.aboutTRToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.aboutTRToolStripMenuItem.Text = "О лечении";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Image = global::DSS.Properties.Resources.printer;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.printToolStripMenuItem.Text = "Печать";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonPrint_Click);
             // 
@@ -1597,7 +1595,7 @@
             // 
             this.updToolStripMenuItem.Image = global::DSS.Properties.Resources.table_refresh;
             this.updToolStripMenuItem.Name = "updToolStripMenuItem";
-            this.updToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.updToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.updToolStripMenuItem.Text = "Обновить";
             this.updToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_UpdHist_Click);
             // 
@@ -1618,9 +1616,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Карточка: Новая";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.KartaForm_Load);
             this.Activated += new System.EventHandler(this.KartaForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KartaForm_FormClosing);
+            this.Load += new System.EventHandler(this.KartaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PosesenieBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.___BASA__DataSet)).EndInit();
             this.tabControlMain.ResumeLayout(false);
@@ -1663,14 +1661,8 @@
             this.panelPHOTO.ResumeLayout(false);
             this.panelPHOTO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
-            this.toolStripPhoto.ResumeLayout(false);
-            this.toolStripPhoto.PerformLayout();
-            this.toolStripMain.ResumeLayout(false);
-            this.toolStripMain.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.toolStrip_page2.ResumeLayout(false);
-            this.toolStrip_page2.PerformLayout();
             this.panelCaption.ResumeLayout(false);
             this.panelCaption.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

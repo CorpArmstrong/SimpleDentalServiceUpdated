@@ -285,7 +285,7 @@
             this.panelRight.Controls.Add(this.panel12);
             this.panelRight.Controls.Add(this.button11);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(708, 49);
+            this.panelRight.Location = new System.Drawing.Point(632, 49);
             this.panelRight.Name = "panelRight";
             this.panelRight.Padding = new System.Windows.Forms.Padding(3);
             this.panelRight.Size = new System.Drawing.Size(365, 575);
@@ -301,9 +301,9 @@
             this.treeView_Right.Name = "treeView_Right";
             this.treeView_Right.Size = new System.Drawing.Size(359, 404);
             this.treeView_Right.TabIndex = 0;
-            this.treeView_Right.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Right_NodeMouseDoubleClick);
             this.treeView_Right.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView_Right.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Tr_NodeMouseClick);
+            this.treeView_Right.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Right_NodeMouseDoubleClick);
             this.treeView_Right.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView_Right_KeyDown);
             // 
             // panel11
@@ -382,7 +382,7 @@
             this.toolStripDropDownButton1});
             this.toolStripMain.Location = new System.Drawing.Point(0, 0);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(708, 36);
+            this.toolStripMain.Size = new System.Drawing.Size(632, 38);
             this.toolStripMain.TabIndex = 2;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -393,17 +393,17 @@
             this.toolStripButton_Save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Save.Name = "toolStripButton_Save";
-            this.toolStripButton_Save.Size = new System.Drawing.Size(66, 33);
+            this.toolStripButton_Save.Size = new System.Drawing.Size(69, 35);
             this.toolStripButton_Save.Text = "Сохранить";
             this.toolStripButton_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton_Save.ToolTipText = "Сохранить лечение не выписывая наряд";
-            this.toolStripButton_Save.EnabledChanged += new System.EventHandler(this.toolStripButton_Save_EnabledChanged);
             this.toolStripButton_Save.Click += new System.EventHandler(this.button_Save_Click);
+            this.toolStripButton_Save.EnabledChanged += new System.EventHandler(this.toolStripButton_Save_EnabledChanged);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 36);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // toolStripDropDownButton1
             // 
@@ -414,7 +414,7 @@
             this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(121, 33);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(130, 35);
             this.toolStripDropDownButton1.Text = "Завершить лечение";
             this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -424,7 +424,7 @@
             this.toolStripButtonNarad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonNarad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNarad.Name = "toolStripButtonNarad";
-            this.toolStripButtonNarad.Size = new System.Drawing.Size(198, 22);
+            this.toolStripButtonNarad.Size = new System.Drawing.Size(194, 22);
             this.toolStripButtonNarad.Text = "Выписывать наряд";
             this.toolStripButtonNarad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonNarad.ToolTipText = "Сохранить лечение, закрыть форму. Выписать наряд и отправить в кассу для оплаты.";
@@ -436,7 +436,7 @@
             this.toolStripButtonNoNarad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonNoNarad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNoNarad.Name = "toolStripButtonNoNarad";
-            this.toolStripButtonNoNarad.Size = new System.Drawing.Size(198, 22);
+            this.toolStripButtonNoNarad.Size = new System.Drawing.Size(194, 22);
             this.toolStripButtonNoNarad.Text = "Не выписывать наряд";
             this.toolStripButtonNoNarad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonNoNarad.ToolTipText = "Сохранить лечение, закрыть форму. Не выписывать наряд.";
@@ -448,13 +448,13 @@
             this.очиститьToolStripMenuItem});
             this.contextMenuStripZub.Name = "contextMenuStrip1";
             this.contextMenuStripZub.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStripZub.Size = new System.Drawing.Size(135, 26);
+            this.contextMenuStripZub.Size = new System.Drawing.Size(127, 26);
             // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.Clean_Zub_ToolStripMenuItem_Click);
             // 
@@ -465,9 +465,9 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.tableLayoutPanel2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 36);
+            this.panel8.Location = new System.Drawing.Point(0, 38);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(708, 136);
+            this.panel8.Size = new System.Drawing.Size(632, 136);
             this.panel8.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -1087,7 +1087,7 @@
             this.panelDs_Tr.Controls.Add(this.panel_up);
             this.panelDs_Tr.Controls.Add(this.button12);
             this.panelDs_Tr.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelDs_Tr.Location = new System.Drawing.Point(1073, 49);
+            this.panelDs_Tr.Location = new System.Drawing.Point(997, 49);
             this.panelDs_Tr.Name = "panelDs_Tr";
             this.panelDs_Tr.Padding = new System.Windows.Forms.Padding(3);
             this.panelDs_Tr.Size = new System.Drawing.Size(365, 575);
@@ -1122,9 +1122,9 @@
             this.treeView_Tr.Size = new System.Drawing.Size(353, 138);
             this.treeView_Tr.TabIndex = 8;
             this.treeView_Tr.Visible = false;
-            this.treeView_Tr.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Tr_NodeMouseDoubleClick);
             this.treeView_Tr.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_Tr_AfterSelect);
             this.treeView_Tr.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Tr_NodeMouseClick);
+            this.treeView_Tr.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Tr_NodeMouseDoubleClick);
             this.treeView_Tr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView_Tr_KeyDown);
             // 
             // panel18
@@ -1188,9 +1188,9 @@
             this.treeView_DS.Size = new System.Drawing.Size(353, 188);
             this.treeView_DS.TabIndex = 10;
             this.treeView_DS.Visible = false;
-            this.treeView_DS.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewDS_NodeMouseDoubleClick);
             this.treeView_DS.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDS_AfterSelect);
             this.treeView_DS.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Tr_NodeMouseClick);
+            this.treeView_DS.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewDS_NodeMouseDoubleClick);
             this.treeView_DS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewDS_KeyDown);
             // 
             // panel20
@@ -1339,7 +1339,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Выбранное лечение";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 133;
+            this.dataGridViewTextBoxColumn2.Width = 122;
             // 
             // Skolko
             // 
@@ -1695,10 +1695,10 @@
             this.panel2.Controls.Add(this.panelAn);
             this.panel2.Controls.Add(this.panelZal);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 172);
+            this.panel2.Location = new System.Drawing.Point(0, 174);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(708, 403);
+            this.panel2.Size = new System.Drawing.Size(632, 401);
             this.panel2.TabIndex = 0;
             // 
             // panel3
@@ -1709,7 +1709,7 @@
             this.panel3.Location = new System.Drawing.Point(5, 353);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(3);
-            this.panel3.Size = new System.Drawing.Size(681, 70);
+            this.panel3.Size = new System.Drawing.Size(605, 70);
             this.panel3.TabIndex = 90;
             // 
             // label1
@@ -1717,17 +1717,17 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(552, 64);
+            this.label1.Size = new System.Drawing.Size(476, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Общая стоимость лечения (может быть введена любая сумма, отличная от автоматическ" +
-                "ой)";
+    "ой)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.DecimalPlaces = 2;
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.numericUpDown1.Location = new System.Drawing.Point(555, 3);
+            this.numericUpDown1.Location = new System.Drawing.Point(479, 3);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             -727379968,
             232,
@@ -1756,8 +1756,8 @@
             this.splitContainer_TR.Panel2.AutoScroll = true;
             this.splitContainer_TR.Panel2.Controls.Add(this.richTextBox_TR_MY);
             this.splitContainer_TR.Panel2MinSize = 30;
-            this.splitContainer_TR.Size = new System.Drawing.Size(681, 100);
-            this.splitContainer_TR.SplitterDistance = 452;
+            this.splitContainer_TR.Size = new System.Drawing.Size(605, 100);
+            this.splitContainer_TR.SplitterDistance = 401;
             this.splitContainer_TR.TabIndex = 4;
             // 
             // Tr_dataGridView
@@ -1814,7 +1814,7 @@
             this.Tr_dataGridView.RowTemplate.Height = 18;
             this.Tr_dataGridView.RowTemplate.ReadOnly = true;
             this.Tr_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Tr_dataGridView.Size = new System.Drawing.Size(365, 100);
+            this.Tr_dataGridView.Size = new System.Drawing.Size(314, 100);
             this.Tr_dataGridView.TabIndex = 1;
             this.Tr_dataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Tr_dataGridView_RowsAdded);
             this.Tr_dataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Tr_dataGridView_RowsRemoved);
@@ -1888,7 +1888,7 @@
             this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
             this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(85, 17);
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(85, 19);
             this.toolStripSplitButton2.Text = "Лечение";
             this.toolStripSplitButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButton2.ToolTipText = "Выбрать лечение, не связанное с зубом";
@@ -1899,17 +1899,17 @@
             // 
             this.toolStripMenuItem_MYTR.Image = global::DSS.Properties.Resources.text_signature;
             this.toolStripMenuItem_MYTR.Name = "toolStripMenuItem_MYTR";
-            this.toolStripMenuItem_MYTR.Size = new System.Drawing.Size(258, 22);
+            this.toolStripMenuItem_MYTR.Size = new System.Drawing.Size(255, 22);
             this.toolStripMenuItem_MYTR.Text = "Свой текст";
             this.toolStripMenuItem_MYTR.ToolTipText = "При активации в карточке будет сохранен Ваш текст, по умолчанию текст генерируетс" +
-                "я автоматически";
+    "я автоматически";
             this.toolStripMenuItem_MYTR.Click += new System.EventHandler(this.toolStripMenuItem_MYTR_Click);
             // 
             // cleanMYTRToolStripMenuItem
             // 
             this.cleanMYTRToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanMYTRToolStripMenuItem.Name = "cleanMYTRToolStripMenuItem";
-            this.cleanMYTRToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.cleanMYTRToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.cleanMYTRToolStripMenuItem.Text = "Очистить Свой текст";
             this.cleanMYTRToolStripMenuItem.Visible = false;
             this.cleanMYTRToolStripMenuItem.Click += new System.EventHandler(this.cleanMYTRToolStripMenuItem_Click);
@@ -1918,7 +1918,7 @@
             // 
             this.autoTRtoolStripMenuItem.Image = global::DSS.Properties.Resources.table_refresh;
             this.autoTRtoolStripMenuItem.Name = "autoTRtoolStripMenuItem";
-            this.autoTRtoolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.autoTRtoolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.autoTRtoolStripMenuItem.Text = "Сгенерировать Автотекст заново";
             this.autoTRtoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -1929,11 +1929,11 @@
             this.richTextBox_TR_MY.Location = new System.Drawing.Point(0, 0);
             this.richTextBox_TR_MY.Name = "richTextBox_TR_MY";
             this.richTextBox_TR_MY.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox_TR_MY.Size = new System.Drawing.Size(225, 100);
+            this.richTextBox_TR_MY.Size = new System.Drawing.Size(200, 100);
             this.richTextBox_TR_MY.TabIndex = 0;
             this.richTextBox_TR_MY.Text = "";
-            this.richTextBox_TR_MY.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             this.richTextBox_TR_MY.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richTextBox_TR_MY_ContentsResized_1);
+            this.richTextBox_TR_MY.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             // 
             // posesenieBindingSource
             // 
@@ -1958,8 +1958,8 @@
             this.splitContainer_DS.Panel2.AutoScroll = true;
             this.splitContainer_DS.Panel2.Controls.Add(this.richTextBox_DS_MY);
             this.splitContainer_DS.Panel2MinSize = 30;
-            this.splitContainer_DS.Size = new System.Drawing.Size(681, 100);
-            this.splitContainer_DS.SplitterDistance = 452;
+            this.splitContainer_DS.Size = new System.Drawing.Size(605, 100);
+            this.splitContainer_DS.SplitterDistance = 401;
             this.splitContainer_DS.TabIndex = 3;
             // 
             // DS_DataGridView
@@ -2016,7 +2016,7 @@
             this.DS_DataGridView.RowTemplate.Height = 18;
             this.DS_DataGridView.RowTemplate.ReadOnly = true;
             this.DS_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DS_DataGridView.Size = new System.Drawing.Size(365, 100);
+            this.DS_DataGridView.Size = new System.Drawing.Size(314, 100);
             this.DS_DataGridView.TabIndex = 1;
             this.DS_DataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DS_DataGridView_RowsAdded);
             this.DS_DataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DS_DataGridView_RowsRemoved);
@@ -2069,7 +2069,7 @@
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(85, 17);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(85, 19);
             this.toolStripSplitButton1.Text = "Диагноз";
             this.toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButton1.ToolTipText = "Выбрать диагноз, не связанный с зубом";
@@ -2080,17 +2080,17 @@
             // 
             this.myDSToolStripMenuItem.Image = global::DSS.Properties.Resources.text_signature;
             this.myDSToolStripMenuItem.Name = "myDSToolStripMenuItem";
-            this.myDSToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.myDSToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.myDSToolStripMenuItem.Text = "Свой текст";
             this.myDSToolStripMenuItem.ToolTipText = "При активации в карточке будет сохранен Ваш текст, по умолчанию текст генерируетс" +
-                "я автоматически";
+    "я автоматически";
             this.myDSToolStripMenuItem.Click += new System.EventHandler(this.myDSToolStripMenuItem_Click);
             // 
             // cleanMYDSToolStripMenuItem
             // 
             this.cleanMYDSToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanMYDSToolStripMenuItem.Name = "cleanMYDSToolStripMenuItem";
-            this.cleanMYDSToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.cleanMYDSToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.cleanMYDSToolStripMenuItem.Text = "Очистить Свой текст";
             this.cleanMYDSToolStripMenuItem.Click += new System.EventHandler(this.cleanMYDSToolStripMenuItem_Click);
             // 
@@ -2098,7 +2098,7 @@
             // 
             this.autoDSToolStripMenuItem.Image = global::DSS.Properties.Resources.table_refresh;
             this.autoDSToolStripMenuItem.Name = "autoDSToolStripMenuItem";
-            this.autoDSToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.autoDSToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.autoDSToolStripMenuItem.Text = "Сгенерировать Автотекст заново";
             this.autoDSToolStripMenuItem.Click += new System.EventHandler(this.autoDSToolStripMenuItem_Click);
             // 
@@ -2109,11 +2109,11 @@
             this.richTextBox_DS_MY.Location = new System.Drawing.Point(0, 0);
             this.richTextBox_DS_MY.Name = "richTextBox_DS_MY";
             this.richTextBox_DS_MY.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox_DS_MY.Size = new System.Drawing.Size(225, 100);
+            this.richTextBox_DS_MY.Size = new System.Drawing.Size(200, 100);
             this.richTextBox_DS_MY.TabIndex = 0;
             this.richTextBox_DS_MY.Text = "";
-            this.richTextBox_DS_MY.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             this.richTextBox_DS_MY.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richTextBox_DS_MY_ContentsResized);
+            this.richTextBox_DS_MY.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             // 
             // panelOb
             // 
@@ -2124,21 +2124,21 @@
             this.panelOb.Location = new System.Drawing.Point(5, 92);
             this.panelOb.MinimumSize = new System.Drawing.Size(0, 30);
             this.panelOb.Name = "panelOb";
-            this.panelOb.Size = new System.Drawing.Size(681, 61);
+            this.panelOb.Size = new System.Drawing.Size(605, 61);
             this.panelOb.TabIndex = 2;
             // 
             // textBoxObekt
             // 
             this.textBoxObekt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.posesenieBindingSource, "Obekt", true));
             this.textBoxObekt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxObekt.Location = new System.Drawing.Point(87, 0);
+            this.textBoxObekt.Location = new System.Drawing.Point(91, 0);
             this.textBoxObekt.Name = "textBoxObekt";
             this.textBoxObekt.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.textBoxObekt.Size = new System.Drawing.Size(594, 61);
+            this.textBoxObekt.Size = new System.Drawing.Size(514, 61);
             this.textBoxObekt.TabIndex = 1;
             this.textBoxObekt.Text = "";
-            this.textBoxObekt.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             this.textBoxObekt.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.textBoxObekt_ContentsResized);
+            this.textBoxObekt.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             // 
             // toolStripOb
             // 
@@ -2151,7 +2151,7 @@
             this.toolStripOb.Location = new System.Drawing.Point(0, 0);
             this.toolStripOb.Name = "toolStripOb";
             this.toolStripOb.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStripOb.Size = new System.Drawing.Size(87, 61);
+            this.toolStripOb.Size = new System.Drawing.Size(91, 61);
             this.toolStripOb.TabIndex = 0;
             this.toolStripOb.Text = "toolStrip6";
             this.toolStripOb.Resize += new System.EventHandler(this.toolStripOb_Resize);
@@ -2164,7 +2164,7 @@
             this.toolStripSplitButtonOB.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButtonOB.Image")));
             this.toolStripSplitButtonOB.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonOB.Name = "toolStripSplitButtonOB";
-            this.toolStripSplitButtonOB.Size = new System.Drawing.Size(84, 17);
+            this.toolStripSplitButtonOB.Size = new System.Drawing.Size(88, 19);
             this.toolStripSplitButtonOB.Text = "Объективно";
             this.toolStripSplitButtonOB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButtonOB.ToolTipText = "Объективные данные";
@@ -2174,7 +2174,7 @@
             // 
             this.cleanObToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanObToolStripMenuItem.Name = "cleanObToolStripMenuItem";
-            this.cleanObToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.cleanObToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cleanObToolStripMenuItem.Text = "Очистить";
             this.cleanObToolStripMenuItem.Click += new System.EventHandler(this.cleanObToolStripMenuItem_Click);
             // 
@@ -2187,7 +2187,7 @@
             this.panelAn.Location = new System.Drawing.Point(5, 35);
             this.panelAn.MinimumSize = new System.Drawing.Size(0, 30);
             this.panelAn.Name = "panelAn";
-            this.panelAn.Size = new System.Drawing.Size(681, 57);
+            this.panelAn.Size = new System.Drawing.Size(605, 57);
             this.panelAn.TabIndex = 1;
             // 
             // richTextBoxAnamnez
@@ -2198,11 +2198,11 @@
             this.richTextBoxAnamnez.Location = new System.Drawing.Point(87, 0);
             this.richTextBoxAnamnez.Name = "richTextBoxAnamnez";
             this.richTextBoxAnamnez.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBoxAnamnez.Size = new System.Drawing.Size(594, 57);
+            this.richTextBoxAnamnez.Size = new System.Drawing.Size(518, 57);
             this.richTextBoxAnamnez.TabIndex = 0;
             this.richTextBoxAnamnez.Text = "";
-            this.richTextBoxAnamnez.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             this.richTextBoxAnamnez.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richTextBoxAnamnez_ContentsResized);
+            this.richTextBoxAnamnez.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             // 
             // toolStripAnamnez
             // 
@@ -2227,7 +2227,7 @@
             this.toolStripSplitButtonAn.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButtonAn.Image")));
             this.toolStripSplitButtonAn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonAn.Name = "toolStripSplitButtonAn";
-            this.toolStripSplitButtonAn.Size = new System.Drawing.Size(85, 17);
+            this.toolStripSplitButtonAn.Size = new System.Drawing.Size(85, 19);
             this.toolStripSplitButtonAn.Text = "Анамнез";
             this.toolStripSplitButtonAn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButtonAn.ButtonClick += new System.EventHandler(this.toolStripSplitButtonAn_ButtonClick);
@@ -2236,7 +2236,7 @@
             // 
             this.cleanAnToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanAnToolStripMenuItem.Name = "cleanAnToolStripMenuItem";
-            this.cleanAnToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.cleanAnToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cleanAnToolStripMenuItem.Text = "Очистить";
             this.cleanAnToolStripMenuItem.Click += new System.EventHandler(this.cleanAnToolStripMenuItem_Click);
             // 
@@ -2249,7 +2249,7 @@
             this.panelZal.Location = new System.Drawing.Point(5, 5);
             this.panelZal.MinimumSize = new System.Drawing.Size(0, 30);
             this.panelZal.Name = "panelZal";
-            this.panelZal.Size = new System.Drawing.Size(681, 30);
+            this.panelZal.Size = new System.Drawing.Size(605, 30);
             this.panelZal.TabIndex = 0;
             // 
             // textBoxZaloby
@@ -2260,11 +2260,11 @@
             this.textBoxZaloby.Location = new System.Drawing.Point(87, 0);
             this.textBoxZaloby.Name = "textBoxZaloby";
             this.textBoxZaloby.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.textBoxZaloby.Size = new System.Drawing.Size(594, 30);
+            this.textBoxZaloby.Size = new System.Drawing.Size(518, 30);
             this.textBoxZaloby.TabIndex = 0;
             this.textBoxZaloby.Text = "";
-            this.textBoxZaloby.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             this.textBoxZaloby.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.textBoxZaloby_ContentsResized);
+            this.textBoxZaloby.TextChanged += new System.EventHandler(this.textBoxZaloby_TextChanged);
             // 
             // toolStripZal
             // 
@@ -2289,7 +2289,7 @@
             this.toolStripSplitButtonZal.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButtonZal.Image")));
             this.toolStripSplitButtonZal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonZal.Name = "toolStripSplitButtonZal";
-            this.toolStripSplitButtonZal.Size = new System.Drawing.Size(85, 17);
+            this.toolStripSplitButtonZal.Size = new System.Drawing.Size(85, 19);
             this.toolStripSplitButtonZal.Text = "Жалобы";
             this.toolStripSplitButtonZal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButtonZal.ButtonClick += new System.EventHandler(this.toolStripSplitButtonZal_ButtonClick);
@@ -2298,7 +2298,7 @@
             // 
             this.cleanZalToolStripMenuItem.Image = global::DSS.Properties.Resources.trash_16;
             this.cleanZalToolStripMenuItem.Name = "cleanZalToolStripMenuItem";
-            this.cleanZalToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.cleanZalToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cleanZalToolStripMenuItem.Text = "Очистить";
             this.cleanZalToolStripMenuItem.Click += new System.EventHandler(this.cleanZalToolStripMenuItem_Click);
             // 
@@ -2312,7 +2312,7 @@
             this.panelZagolovok.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelZagolovok.Location = new System.Drawing.Point(0, 27);
             this.panelZagolovok.Name = "panelZagolovok";
-            this.panelZagolovok.Size = new System.Drawing.Size(1438, 22);
+            this.panelZagolovok.Size = new System.Drawing.Size(1362, 22);
             this.panelZagolovok.TabIndex = 0;
             // 
             // dateTimePicker1
@@ -2379,7 +2379,7 @@
             this.labelPatFIO.ForeColor = System.Drawing.Color.White;
             this.labelPatFIO.Location = new System.Drawing.Point(71, 0);
             this.labelPatFIO.Name = "labelPatFIO";
-            this.labelPatFIO.Size = new System.Drawing.Size(1363, 23);
+            this.labelPatFIO.Size = new System.Drawing.Size(1287, 23);
             this.labelPatFIO.TabIndex = 2;
             this.labelPatFIO.Text = "Ф.И.О.";
             this.labelPatFIO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2403,13 +2403,13 @@
             this.contextMenuStripTree.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.takeToolStripMenuItem});
             this.contextMenuStripTree.Name = "contextMenuStripTree";
-            this.contextMenuStripTree.Size = new System.Drawing.Size(115, 26);
+            this.contextMenuStripTree.Size = new System.Drawing.Size(104, 26);
             // 
             // takeToolStripMenuItem
             // 
             this.takeToolStripMenuItem.Image = global::DSS.Properties.Resources.thumb_up;
             this.takeToolStripMenuItem.Name = "takeToolStripMenuItem";
-            this.takeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.takeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.takeToolStripMenuItem.Text = "Взять";
             this.takeToolStripMenuItem.Click += new System.EventHandler(this.takeToolStripMenuItem_Click);
             // 
@@ -2446,6 +2446,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = this.posesenieTableAdapter;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = null;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = this.treatDSTableAdapter;
             this.tableAdapterManager.TreatTableAdapter = this.treatTableAdapter;
@@ -2590,7 +2591,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 575);
+            this.panel1.Size = new System.Drawing.Size(632, 575);
             this.panel1.TabIndex = 1;
             // 
             // personalVievTableAdapter1
@@ -2606,7 +2607,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1438, 27);
+            this.panel4.Size = new System.Drawing.Size(1362, 27);
             this.panel4.TabIndex = 78;
             // 
             // Posesenie
@@ -2615,7 +2616,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1438, 624);
+            this.ClientSize = new System.Drawing.Size(1362, 624);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelDs_Tr);
@@ -2624,8 +2625,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Posesenie";
             this.Text = "Лечение";
-            this.Load += new System.EventHandler(this.Posesenie_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Posesenie_FormClosing);
+            this.Load += new System.EventHandler(this.Posesenie_Load);
             this.panelRight.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();

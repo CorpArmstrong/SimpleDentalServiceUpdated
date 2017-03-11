@@ -110,6 +110,7 @@ namespace DSS
             }
         }
 
+        // CorpArmstrong TODO: Ability to set up datetime!
         private void button1_Click(object sender, EventArgs e)
         {
             bool close = true;
@@ -131,7 +132,6 @@ namespace DSS
                     close = false;
                 }
             }
-
             else if ((string)this.Tag == "from")//"Списание Долга из Предоплаты"
             {
                 if (dolgSumma >= predSumma && numericUpDown1.Value + predSumma == dolgSumma)
@@ -174,7 +174,6 @@ namespace DSS
                         close = false;
                     }
                 }
-
                 else if (dolgSumma < predSumma)
                 {
                     if (MessageBox.Show("Долг полностью погашен.\rОстаток предоплаты : " + (predSumma - dolgSumma).ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -193,7 +192,6 @@ namespace DSS
                     }
                 }
             }
-
             else if ((string)this.Tag == "pay1")//"Оплата Долга";
             {
                 if (numericUpDown1.Value == dolgSumma)
@@ -235,7 +233,6 @@ namespace DSS
                     }
                 }
             }
-
             else if ((string)this.Tag == "pay0")//"СПИСАНИЕ ДОЛГА"
             {
                 if (numericUpDown1.Value == dolgSumma)

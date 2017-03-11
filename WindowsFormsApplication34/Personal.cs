@@ -71,7 +71,9 @@ namespace DSS
             filterAZ = "DF LIKE '" + Litera + "%'";
             filterPers();
             foreach (ToolStripButton buttn in toolStripAlfavit.Items)
-            { buttn.CheckState = CheckState.Unchecked; }
+            {
+                buttn.CheckState = CheckState.Unchecked;
+            }
             ((ToolStripButton)sender).CheckState = CheckState.Checked;
         }
 
@@ -80,7 +82,9 @@ namespace DSS
             filterAZ = "";
             filterPers();
             foreach (ToolStripButton buttn in toolStripAlfavit.Items)
-            { buttn.CheckState = CheckState.Unchecked; }
+            {
+                buttn.CheckState = CheckState.Unchecked;
+            }
             ((ToolStripButton)sender).CheckState = CheckState.Checked;
         }
 
@@ -259,7 +263,6 @@ namespace DSS
 
         private void toolStripButton33_Click(object sender, EventArgs e)
         {
-
             DeloPers delo = new DeloPers();
             delo.Tag = 0;
             ((MainForm)this.MdiParent).checkWin(delo);

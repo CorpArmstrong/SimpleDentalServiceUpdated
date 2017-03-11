@@ -29,11 +29,7 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -48,7 +44,6 @@ namespace DSS
         private void KorzinaKadry_Load(object sender, EventArgs e)
         {
             this.personalVievTableAdapter.Fill(this.___BASA__DataSet.PersonalViev, false);
-
         }
 
         private void toolStripButtonBack_Click(object sender, EventArgs e)
@@ -63,7 +58,6 @@ namespace DSS
 
         private void toolStripButtonDel_Click(object sender, EventArgs e)
         {
-
             if (personalVievBindingSource.Current != null)
             {
                 if (MessageBox.Show("Удалить личное дело?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)

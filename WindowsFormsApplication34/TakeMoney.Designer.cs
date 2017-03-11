@@ -42,6 +42,7 @@
             this.plataTableAdapter1 = new DSS.___BASA__DataSetTableAdapters.PlataTableAdapter();
             this.___BASA__DataSet = new DSS.___BASA__DataSet();
             this.dolgTableAdapter = new DSS.___BASA__DataSetTableAdapters.DolgTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.___BASA__DataSet)).BeginInit();
@@ -168,6 +169,7 @@
             this.tableLayoutPanel1.Controls.Add(this.labelDolg, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -205,6 +207,13 @@
             // dolgTableAdapter
             // 
             this.dolgTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(305, 63);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePicker1.TabIndex = 12;
             // 
             // TakeMoney
             // 
@@ -246,5 +255,6 @@
         private System.Windows.Forms.Button buttonCansel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label labelPred;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

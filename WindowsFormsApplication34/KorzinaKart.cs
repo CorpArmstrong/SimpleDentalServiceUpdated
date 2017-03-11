@@ -29,12 +29,7 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-//using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DSS
@@ -46,10 +41,6 @@ namespace DSS
             InitializeComponent();
         }
 
-       
-
-        
-
         private void KorzinaKart_Load(object sender, EventArgs e)
         {
             kartyTableAdapter.Fill(___BASA__DataSet.Karty, false);
@@ -59,10 +50,9 @@ namespace DSS
         {
             if (kartyBindingSource.Current != null)
             {
-                  int PID = (int)((DataRowView)kartyBindingSource.Current)["PID"];
-                    kartaTableAdapter.UpdateQueryRealByPID(true, PID);
-                    kartyTableAdapter.Fill(___BASA__DataSet.Karty, false);
-                
+                int PID = (int)((DataRowView)kartyBindingSource.Current)["PID"];
+                kartaTableAdapter.UpdateQueryRealByPID(true, PID);
+                kartyTableAdapter.Fill(___BASA__DataSet.Karty, false);
             }
         }
 
@@ -85,8 +75,6 @@ namespace DSS
             {
                 kartyDataGridView[e.ColumnIndex, e.RowIndex].Selected = true;
             }
-         
-           
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -97,7 +85,6 @@ namespace DSS
                 {
                     int PID = (int)dr["PID"];
                     kartaTableAdapter.DeleteQuery(PID);
-                   // 
                 }
                 kartyTableAdapter.Fill(___BASA__DataSet.Karty, false);
             }
@@ -110,8 +97,5 @@ namespace DSS
                 this.Close();
             }
         }
-
-      
-           
     }
 }

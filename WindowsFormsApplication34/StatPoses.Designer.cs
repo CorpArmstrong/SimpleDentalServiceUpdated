@@ -73,6 +73,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearStatsButton = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posesenieDataGridView)).BeginInit();
             this.contextMenuStripDOC.SuspendLayout();
@@ -104,7 +105,7 @@
             this.toolStripButtonUPD.Image = global::DSS.Properties.Resources.table_refresh;
             this.toolStripButtonUPD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonUPD.Name = "toolStripButtonUPD";
-            this.toolStripButtonUPD.Size = new System.Drawing.Size(77, 22);
+            this.toolStripButtonUPD.Size = new System.Drawing.Size(81, 22);
             this.toolStripButtonUPD.Text = "Обновить";
             this.toolStripButtonUPD.Click += new System.EventHandler(this.StatPoses_Activated);
             // 
@@ -144,8 +145,8 @@
             this.posesenieDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.posesenieDataGridView.Size = new System.Drawing.Size(947, 348);
             this.posesenieDataGridView.TabIndex = 2;
-            this.posesenieDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.posesenieDataGridView_ColumnHeaderMouseDoubleClick);
             this.posesenieDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.posesenieDataGridView_CellMouseDown);
+            this.posesenieDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.posesenieDataGridView_ColumnHeaderMouseDoubleClick);
             this.posesenieDataGridView.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.posesenieDataGridView_ColumnWidthChanged);
             // 
             // датаDataGridViewTextBoxColumn
@@ -208,13 +209,13 @@
             this.openKarttoolStripMenuItem1,
             this.onePATtoolStripMenuItem2});
             this.contextMenuStripPAT.Name = "contextMenuStripDOC";
-            this.contextMenuStripPAT.Size = new System.Drawing.Size(225, 48);
+            this.contextMenuStripPAT.Size = new System.Drawing.Size(227, 48);
             // 
             // openKarttoolStripMenuItem1
             // 
             this.openKarttoolStripMenuItem1.Image = global::DSS.Properties.Resources.user;
             this.openKarttoolStripMenuItem1.Name = "openKarttoolStripMenuItem1";
-            this.openKarttoolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
+            this.openKarttoolStripMenuItem1.Size = new System.Drawing.Size(226, 22);
             this.openKarttoolStripMenuItem1.Text = "Открыть карточку";
             this.openKarttoolStripMenuItem1.Click += new System.EventHandler(this.openKarttoolStripMenuItem1_Click);
             // 
@@ -222,7 +223,7 @@
             // 
             this.onePATtoolStripMenuItem2.Image = global::DSS.Properties.Resources.fillter;
             this.onePATtoolStripMenuItem2.Name = "onePATtoolStripMenuItem2";
-            this.onePATtoolStripMenuItem2.Size = new System.Drawing.Size(224, 22);
+            this.onePATtoolStripMenuItem2.Size = new System.Drawing.Size(226, 22);
             this.onePATtoolStripMenuItem2.Text = "Посещения этого пациента";
             this.onePATtoolStripMenuItem2.Click += new System.EventHandler(this.onePATtoolStripMenuItem2_Click);
             // 
@@ -295,6 +296,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.clearStatsButton, 5, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -315,7 +317,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(239, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(255, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -340,7 +342,7 @@
             this.toolStripButtonTOD.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonTOD.Image")));
             this.toolStripButtonTOD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonTOD.Name = "toolStripButtonTOD";
-            this.toolStripButtonTOD.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButtonTOD.Size = new System.Drawing.Size(56, 22);
             this.toolStripButtonTOD.Text = "Сегодня";
             this.toolStripButtonTOD.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -351,7 +353,7 @@
             this.toolStripButtonMONTH.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMONTH.Image")));
             this.toolStripButtonMONTH.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonMONTH.Name = "toolStripButtonMONTH";
-            this.toolStripButtonMONTH.Size = new System.Drawing.Size(88, 22);
+            this.toolStripButtonMONTH.Size = new System.Drawing.Size(98, 22);
             this.toolStripButtonMONTH.Text = "Текущий месяц";
             this.toolStripButtonMONTH.Click += new System.EventHandler(this.toolStripButtonMONTH_Click);
             // 
@@ -362,7 +364,7 @@
             this.toolStripButtonPERIOD.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPERIOD.Image")));
             this.toolStripButtonPERIOD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPERIOD.Name = "toolStripButtonPERIOD";
-            this.toolStripButtonPERIOD.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButtonPERIOD.Size = new System.Drawing.Size(53, 22);
             this.toolStripButtonPERIOD.Text = "Период";
             this.toolStripButtonPERIOD.CheckedChanged += new System.EventHandler(this.toolStripButtonPERIOD_CheckedChanged);
             this.toolStripButtonPERIOD.Click += new System.EventHandler(this.toolStripButtonPERIOD_Click);
@@ -371,7 +373,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(382, 0);
+            this.label3.Location = new System.Drawing.Point(398, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 26);
@@ -383,7 +385,7 @@
             // 
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(404, 3);
+            this.dateTimePicker2.Location = new System.Drawing.Point(420, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker2.TabIndex = 1;
@@ -393,7 +395,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(239, 0);
+            this.label2.Location = new System.Drawing.Point(255, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 26);
@@ -405,7 +407,7 @@
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(255, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(271, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -490,6 +492,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = null;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = null;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = null;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -547,6 +550,15 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Сумма";
             this.dataGridViewTextBoxColumn5.HeaderText = "Сумма";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // clearStatsButton
+            // 
+            this.clearStatsButton.Location = new System.Drawing.Point(550, 3);
+            this.clearStatsButton.Name = "clearStatsButton";
+            this.clearStatsButton.Size = new System.Drawing.Size(160, 20);
+            this.clearStatsButton.TabIndex = 6;
+            this.clearStatsButton.Text = "Очистить статистику";
+            this.clearStatsButton.UseVisualStyleBackColor = true;
             // 
             // StatPoses
             // 
@@ -624,5 +636,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button clearStatsButton;
     }
 }

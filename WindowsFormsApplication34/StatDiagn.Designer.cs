@@ -68,6 +68,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearStatsButton = new System.Windows.Forms.Button();
             this.toolStripFILTR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statDiagnosisDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statDiagnosisBindingSource)).BeginInit();
@@ -119,7 +120,7 @@
             this.toolStripButtonDOC.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDOC.Image")));
             this.toolStripButtonDOC.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDOC.Name = "toolStripButtonDOC";
-            this.toolStripButtonDOC.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButtonDOC.Size = new System.Drawing.Size(51, 22);
             this.toolStripButtonDOC.Text = "Доктор";
             this.toolStripButtonDOC.Click += new System.EventHandler(this.toolStripButtonDATA_Click);
             // 
@@ -131,7 +132,7 @@
             this.toolStripButtonPAT.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPAT.Image")));
             this.toolStripButtonPAT.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPAT.Name = "toolStripButtonPAT";
-            this.toolStripButtonPAT.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButtonPAT.Size = new System.Drawing.Size(58, 22);
             this.toolStripButtonPAT.Text = "Пациент";
             this.toolStripButtonPAT.Click += new System.EventHandler(this.toolStripButtonDATA_Click);
             // 
@@ -142,7 +143,7 @@
             this.toolStripButtonBUILD.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonBUILD.Image")));
             this.toolStripButtonBUILD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonBUILD.Name = "toolStripButtonBUILD";
-            this.toolStripButtonBUILD.Size = new System.Drawing.Size(65, 22);
+            this.toolStripButtonBUILD.Size = new System.Drawing.Size(70, 22);
             this.toolStripButtonBUILD.Text = "Построить";
             this.toolStripButtonBUILD.Click += new System.EventHandler(this.toolStripButtonBUILD_Click);
             // 
@@ -155,7 +156,7 @@
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(57, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(60, 22);
             this.toolStripLabel1.Text = "Фильтры:";
             // 
             // toolStripButtonFiltrTR
@@ -165,7 +166,7 @@
             this.toolStripButtonFiltrTR.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonFiltrTR.Image")));
             this.toolStripButtonFiltrTR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFiltrTR.Name = "toolStripButtonFiltrTR";
-            this.toolStripButtonFiltrTR.Size = new System.Drawing.Size(53, 22);
+            this.toolStripButtonFiltrTR.Size = new System.Drawing.Size(56, 22);
             this.toolStripButtonFiltrTR.Text = "Диагноз";
             this.toolStripButtonFiltrTR.Click += new System.EventHandler(this.toolStripButtonFiltrTR_Click);
             // 
@@ -176,7 +177,7 @@
             this.toolStripButtonFiltrDOC.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonFiltrDOC.Image")));
             this.toolStripButtonFiltrDOC.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFiltrDOC.Name = "toolStripButtonFiltrDOC";
-            this.toolStripButtonFiltrDOC.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButtonFiltrDOC.Size = new System.Drawing.Size(51, 22);
             this.toolStripButtonFiltrDOC.Text = "Доктор";
             this.toolStripButtonFiltrDOC.Visible = false;
             this.toolStripButtonFiltrDOC.Click += new System.EventHandler(this.toolStripButtonFiltrDOC_Click);
@@ -188,7 +189,7 @@
             this.toolStripButtonFiltrPAT.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonFiltrPAT.Image")));
             this.toolStripButtonFiltrPAT.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFiltrPAT.Name = "toolStripButtonFiltrPAT";
-            this.toolStripButtonFiltrPAT.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButtonFiltrPAT.Size = new System.Drawing.Size(58, 22);
             this.toolStripButtonFiltrPAT.Text = "Пациент";
             this.toolStripButtonFiltrPAT.Visible = false;
             this.toolStripButtonFiltrPAT.Click += new System.EventHandler(this.toolStripButtonFiltrPAT_Click);
@@ -219,13 +220,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.statDiagnosisDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.statDiagnosisDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statDiagnosisDataGridView.Location = new System.Drawing.Point(0, 51);
+            this.statDiagnosisDataGridView.Location = new System.Drawing.Point(0, 53);
             this.statDiagnosisDataGridView.Name = "statDiagnosisDataGridView";
             this.statDiagnosisDataGridView.ReadOnly = true;
             this.statDiagnosisDataGridView.RowHeadersVisible = false;
             this.statDiagnosisDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.statDiagnosisDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.statDiagnosisDataGridView.Size = new System.Drawing.Size(984, 398);
+            this.statDiagnosisDataGridView.Size = new System.Drawing.Size(984, 396);
             this.statDiagnosisDataGridView.TabIndex = 2;
             this.statDiagnosisDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.statDiagnosisDataGridView_CellMouseDown);
             // 
@@ -311,12 +312,13 @@
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker2, 4, 0);
             this.tableLayoutPanelData.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker1, 2, 0);
+            this.tableLayoutPanelData.Controls.Add(this.clearStatsButton, 5, 0);
             this.tableLayoutPanelData.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanelData.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanelData.Name = "tableLayoutPanelData";
             this.tableLayoutPanelData.RowCount = 1;
             this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelData.Size = new System.Drawing.Size(984, 26);
+            this.tableLayoutPanelData.Size = new System.Drawing.Size(984, 28);
             this.tableLayoutPanelData.TabIndex = 4;
             this.tableLayoutPanelData.Visible = false;
             // 
@@ -332,7 +334,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(239, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(255, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -357,7 +359,7 @@
             this.toolStripButtonTOD.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonTOD.Image")));
             this.toolStripButtonTOD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonTOD.Name = "toolStripButtonTOD";
-            this.toolStripButtonTOD.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButtonTOD.Size = new System.Drawing.Size(56, 22);
             this.toolStripButtonTOD.Text = "Сегодня";
             this.toolStripButtonTOD.Click += new System.EventHandler(this.toolStripButtonTOD_Click);
             // 
@@ -368,7 +370,7 @@
             this.toolStripButtonMONTH.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMONTH.Image")));
             this.toolStripButtonMONTH.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonMONTH.Name = "toolStripButtonMONTH";
-            this.toolStripButtonMONTH.Size = new System.Drawing.Size(88, 22);
+            this.toolStripButtonMONTH.Size = new System.Drawing.Size(98, 22);
             this.toolStripButtonMONTH.Text = "Текущий месяц";
             this.toolStripButtonMONTH.Click += new System.EventHandler(this.toolStripButtonMONTH_Click);
             // 
@@ -380,7 +382,7 @@
             this.toolStripButtonPERIOD.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPERIOD.Image")));
             this.toolStripButtonPERIOD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPERIOD.Name = "toolStripButtonPERIOD";
-            this.toolStripButtonPERIOD.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButtonPERIOD.Size = new System.Drawing.Size(53, 22);
             this.toolStripButtonPERIOD.Text = "Период";
             this.toolStripButtonPERIOD.CheckedChanged += new System.EventHandler(this.toolStripButtonPERIOD_CheckedChanged);
             this.toolStripButtonPERIOD.Click += new System.EventHandler(this.toolStripButtonPERIOD_Click);
@@ -389,10 +391,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(382, 0);
+            this.label3.Location = new System.Drawing.Point(398, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 26);
+            this.label3.Size = new System.Drawing.Size(19, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "по";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,7 +403,7 @@
             // 
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(404, 3);
+            this.dateTimePicker2.Location = new System.Drawing.Point(420, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker2.TabIndex = 1;
@@ -411,10 +413,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(239, 0);
+            this.label2.Location = new System.Drawing.Point(255, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 26);
+            this.label2.Size = new System.Drawing.Size(13, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "с";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -423,7 +425,7 @@
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(255, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(271, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -455,6 +457,7 @@
             this.tableAdapterManager.PosesenieTableAdapter = null;
             this.tableAdapterManager.PredoplataTableAdapter = null;
             this.tableAdapterManager.raspisanieTableAdapter = null;
+            this.tableAdapterManager.setupDatesTableAdapter = null;
             this.tableAdapterManager.SexTableAdapter = null;
             this.tableAdapterManager.TreatDSTableAdapter = null;
             this.tableAdapterManager.TreatTableAdapter = null;
@@ -513,6 +516,15 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // clearStatsButton
+            // 
+            this.clearStatsButton.Location = new System.Drawing.Point(550, 3);
+            this.clearStatsButton.Name = "clearStatsButton";
+            this.clearStatsButton.Size = new System.Drawing.Size(160, 22);
+            this.clearStatsButton.TabIndex = 6;
+            this.clearStatsButton.Text = "Очистить статистику";
+            this.clearStatsButton.UseVisualStyleBackColor = true;
             // 
             // StatDiagn
             // 
@@ -584,5 +596,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PFIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Many;
+        private System.Windows.Forms.Button clearStatsButton;
     }
 }

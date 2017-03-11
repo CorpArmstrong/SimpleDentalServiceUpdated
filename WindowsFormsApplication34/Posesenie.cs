@@ -29,11 +29,9 @@
 * ЛИЦО БЫЛИ ИЗВЕЩЕНЫ О ВОЗМОЖНОСТИ ТАКИХ УБЫТКОВ.
 */
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
@@ -97,7 +95,6 @@ namespace DSS
 
                 ((___BASA__DataSet.TreatTreatRow)e.Row).ID = (int)cmdNewID.ExecuteScalar();
                 e.Status = UpdateStatus.SkipCurrentRow;
-
             }
         }
 
@@ -147,7 +144,6 @@ namespace DSS
             }
         }
 
-
         private void FirstTreeNode(___BASA__DataSet.AnamnezDataTable table, TreeView trr)
         {
             trr.Nodes.Clear();
@@ -194,7 +190,6 @@ namespace DSS
             }
         }
 
-
         private void FirstTreeNode(___BASA__DataSet.DiagnosisDataTable table, TreeView trr)
         {
             trr.Nodes.Clear();
@@ -232,7 +227,6 @@ namespace DSS
                     tn = trr.Nodes.Add(f["ID"].ToString(), f["Names"].ToString() + " (цена:" + f["Money"].ToString() + ")");
                     tn.ContextMenuStrip = contextMenuStripTree;
                 }
-
                 else
                 {
                     tn = trr.Nodes.Add("", f["Names"].ToString());
@@ -244,7 +238,6 @@ namespace DSS
 
         private void AddTreeNodes(TreeNode tn, DataRow[] secondRow, DataTable table)
         {
-
             foreach (DataRow f in secondRow)
             {
                 TreeNode lactNode = new TreeNode();
@@ -266,15 +259,19 @@ namespace DSS
                     AddTreeNodes(lactNode, last, table);
                 }
                 lactNode.Tag = f;
-
             }
         }
 
         void node_Select(TreeNode nod, TextBox txt)
         {
             if (nod.Name != "")
-            { txt.Text = ((DataRow)nod.Tag)["Texts"].ToString(); }
-            else { txt.Text = ""; }
+            {
+                txt.Text = ((DataRow)nod.Tag)["Texts"].ToString();
+            }
+            else
+            {
+                txt.Text = "";
+            }
 
         }
 
@@ -286,7 +283,9 @@ namespace DSS
         void rightPanel_show()
         {
             if (!panelRight.Visible)
-            { panelRight.Visible = true; }
+            {
+                panelRight.Visible = true;
+            }
             textBoxView.Text = "";
             treeView_Right.Focus();
         }
@@ -352,11 +351,15 @@ namespace DSS
         void add_TR()
         {
             if (textBoxSkolko.Text == "")
-            { textBoxSkolko.Text = "1"; }
+            {
+                textBoxSkolko.Text = "1";
+            }
 
             bool da = true;
             try
-            { Convert.ToUInt32(textBoxSkolko.Text); }
+            {
+                Convert.ToUInt32(textBoxSkolko.Text);
+            }
             catch
             {
                 MessageBox.Show("Количество манипуляций должно быть целым числом.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -395,13 +398,17 @@ namespace DSS
         private void panelDs_Tr_VisibleChanged(object sender, EventArgs e)
         {
             if (panelDs_Tr.Visible)
-            { panelRight.Visible = false; }
+            {
+                panelRight.Visible = false;
+            }
         }
 
         private void panelRight_VisibleChanged(object sender, EventArgs e)
         {
             if (panelRight.Visible)
-            { panelDs_Tr.Visible = false; }
+            {
+                panelDs_Tr.Visible = false;
+            }
         }
 
         private void buttonTakeRight_Click(object sender, EventArgs e)
@@ -415,7 +422,6 @@ namespace DSS
             if (treeView_Right.SelectedNode != null)
             {
                 ((RichTextBox)buttonTakeRight.Tag).Text += textBoxView.Text; //treeView1.SelectedNode.Name;
-
                 toolStripButton_Save.Enabled = true;
             }
         }
@@ -424,11 +430,14 @@ namespace DSS
         {
 
             foreach (DataRow r in ___bASA__DataSet.TreatTreat.Select("Zub=" + (string)contextMenuStripZub.SourceControl.Tag))
-            { r.Delete(); }
-
+            {
+                r.Delete();
+            }
 
             foreach (DataRow r in ___bASA__DataSet.TreatDS.Select("Zub=" + (string)contextMenuStripZub.SourceControl.Tag))
-            { r.Delete(); }
+            {
+                r.Delete();
+            }
 
             contextMenuStripZub.SourceControl.BackColor = Color.WhiteSmoke;
         }
@@ -438,7 +447,6 @@ namespace DSS
             add_DS();
         }
 
-
         void del_DS_TR(BindingSource bs)
         {
             if (bs.Current != null)
@@ -447,7 +455,9 @@ namespace DSS
             }
 
             if (treatDSBindingSource2.Count == 0 && treatTreatBindingSource2.Count == 0)
-            { zub.BackColor = Color.WhiteSmoke; }
+            {
+                zub.BackColor = Color.WhiteSmoke;
+            }
         }
 
         private void toolStripButton_DelDS_Click(object sender, EventArgs e)
@@ -463,7 +473,9 @@ namespace DSS
         void del_DS_TR_All(DataTable dt, BindingSource s)
         {
             foreach (DataRow r in dt.Select(s.Filter))
-            { r.Delete(); }
+            {
+                r.Delete();
+            }
             if (treatDSBindingSource2.Count == 0 && treatTreatBindingSource2.Count == 0)
             {
                 if (s.Filter != "Zub=0")
@@ -472,7 +484,6 @@ namespace DSS
                 }
             }
         }
-
 
         private void buttonChoosDS_Click(object sender, EventArgs e)
         {
@@ -515,7 +526,6 @@ namespace DSS
         private void toolStripButton_DelTR_All_Click(object sender, EventArgs e)
         {
             del_DS_TR_All(___bASA__DataSet.TreatTreat, treatTreatBindingSource2);
-
         }
 
         private void treeView_Tr_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -570,7 +580,6 @@ namespace DSS
             resiseRichText((Control)sender, e.NewRectangle.Height);
         }
 
-
         private void textBoxObekt_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
             resiseRichText((Control)sender, e.NewRectangle.Height);
@@ -591,12 +600,10 @@ namespace DSS
             }
         }
 
-
         private void DS_DataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             add_del_RowDS();
         }
-
 
         private void Tr_dataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
@@ -610,7 +617,6 @@ namespace DSS
 
             if (splitContainer_TR.Panel2Collapsed || (!splitContainer_TR.Panel2Collapsed && TR_MY_heit < TRViewH))
             {
-
                 splitContainer_TR.Height = TRViewH;
             }
             else
@@ -671,7 +677,6 @@ namespace DSS
                             b = true;
                             break;
                         }
-
                     }
                     if (!b)
                     {
@@ -683,24 +688,22 @@ namespace DSS
                 }
             }
 
-
             string full = "";
             foreach (int zb in ooo)
             {
                 string str = "";
                 if (zb != 0)
                 {
-
                     str = zb.ToString() + " ЗУБ: ";
                 }
                 foreach (___BASA__DataSet.TreatDSRow dr in ___bASA__DataSet.TreatDS.Select("", "", DataViewRowState.CurrentRows))
                 {
                     if (dr.Zub == zb)
-                    { str += dr.DSZ + ";" + " "; }
-
+                    {
+                        str += dr.DSZ + ";" + " ";
+                    }
                 }
                 full += str + "\r";
-
             }
             richTextBox_DS_MY.Text = full;
             return full;
@@ -727,7 +730,6 @@ namespace DSS
 
         private void toolStripSplitButtonZal_ButtonClick(object sender, EventArgs e)
         {
-
             labelCaption_Right.Text = "Выбираем ЖАЛОБЫ";
             zalobyTableAdapter.FillByReal(___bASA__DataSet.Zaloby, true);
             FirstTreeNode(___bASA__DataSet.Zaloby, treeView_Right);
@@ -769,8 +771,6 @@ namespace DSS
                 myDS();
                 richTextBox_DS_MY.Focus();
             }
-
-
             else if (myDSToolStripMenuItem.CheckState == CheckState.Checked)
             {
                 myDSToolStripMenuItem.CheckState = CheckState.Unchecked;
@@ -788,8 +788,6 @@ namespace DSS
                 myTR();
                 richTextBox_TR_MY.Focus();
             }
-
-
             else if (toolStripMenuItem_MYTR.CheckState == CheckState.Checked)
             {
                 toolStripMenuItem_MYTR.CheckState = CheckState.Unchecked;
@@ -815,7 +813,6 @@ namespace DSS
                             b = true;
                             break;
                         }
-
                     }
                     if (!b)
                     {
@@ -833,15 +830,15 @@ namespace DSS
                 string str = "";
                 if (zb != 0)
                 {
-
                     str = zb.ToString() + " ЗУБ: ";
                 }
 
                 foreach (___BASA__DataSet.TreatTreatRow dr in ___bASA__DataSet.TreatTreat.Select("", "", DataViewRowState.CurrentRows))
                 {
                     if (dr.Zub == zb)
-                    { str += dr.TRZ + ";" + " "; }
-
+                    {
+                        str += dr.TRZ + ";" + " ";
+                    }
                 }
                 full += str + "\r";
             }
@@ -859,9 +856,10 @@ namespace DSS
                 splitContainer_TR.Panel1.SetBounds(splitContainer_TR.Panel1.Bounds.X, splitContainer_TR.Panel1.Bounds.Y, splitContainer_TR.Panel1.Width, TR_MY_heit);
             }
             else if (TR_MY_heit < splitContainer_TR.Height && TR_MY_heit < TRViewH)
-            { splitContainer_TR.Height = TRViewH; }
+            {
+                splitContainer_TR.Height = TRViewH;
+            }
         }
-
 
         private void treeView_Tr_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -874,7 +872,6 @@ namespace DSS
             {
                 add_TR();
             }
-
             else if ((TreeView)contextMenuStripTree.SourceControl == treeView_DS)
             {
                 add_DS();
@@ -907,9 +904,13 @@ namespace DSS
             treatTreatBindingSource2.EndEdit();
 
             if (splitContainer_DS.Panel2Collapsed)
-            { myDS(); }
+            {
+                myDS();
+            }
             if (splitContainer_TR.Panel2Collapsed)
-            { myTR(); }
+            {
+                myTR();
+            }
 
             if (onClose)
             {
@@ -917,16 +918,13 @@ namespace DSS
                 {
                     ___bASA__DataSet.Posesenie[0].Summa = d;
                     ___bASA__DataSet.Posesenie[0].Narad = true;
-
                 }
                 else
                 {
                     ___bASA__DataSet.Posesenie[0].Summa = 0;
                     ___bASA__DataSet.Posesenie[0].Narad = false;
-
                 }
                 toolStripButtonNoNarad.Enabled = toolStripButtonNarad.Enabled = false;
-
             }
             posesenieBindingSource.EndEdit();
             posesenieTableAdapter.Update(___bASA__DataSet.Posesenie);
@@ -947,7 +945,6 @@ namespace DSS
 
             if (onClose)
             {
-
                 if (isNarad)
                 {
                     if (d != 0)
@@ -986,7 +983,6 @@ namespace DSS
                 richTextBox_TR_MY.ContentsResized += richTextBox_TR_MY_ContentsResized_1;
 
                 toolStripButton_Save.Enabled = false;
-
             }
         }
 
@@ -995,8 +991,6 @@ namespace DSS
             Save(true, true);
             this.Close();
         }
-
-
 
         private void textBoxZaloby_TextChanged(object sender, EventArgs e)
         {
@@ -1023,7 +1017,6 @@ namespace DSS
                 if (res == DialogResult.Yes)
                 {
                     Save(true, true);
-
                 }
                 else if (res == DialogResult.Cancel)
                 {
@@ -1033,10 +1026,8 @@ namespace DSS
                         ((MainForm)this.MdiParent).checkWin(this);
                     }
                 }
-
             }
         }
-
 
         private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
         {
@@ -1097,15 +1088,18 @@ namespace DSS
             panel20.Visible = false;
             panelDs_Tr.Visible = true;
             treeView_Tr.BringToFront();
-
         }
 
         private void toolStripSplitButton2_DropDownOpening(object sender, EventArgs e)
         {
             if (toolStripMenuItem_MYTR.Checked)
-            { autoTRtoolStripMenuItem.Visible = cleanMYTRToolStripMenuItem.Visible = true; }
+            {
+                autoTRtoolStripMenuItem.Visible = cleanMYTRToolStripMenuItem.Visible = true;
+            }
             else
-            { autoTRtoolStripMenuItem.Visible = cleanMYTRToolStripMenuItem.Visible = false; }
+            {
+                autoTRtoolStripMenuItem.Visible = cleanMYTRToolStripMenuItem.Visible = false;
+            }
         }
 
         private void cleanMYTRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1127,8 +1121,9 @@ namespace DSS
                 autoDSToolStripMenuItem.Visible = cleanMYDSToolStripMenuItem.Visible = true;
             }
             else
-            { autoDSToolStripMenuItem.Visible = cleanMYDSToolStripMenuItem.Visible = false; }
-
+            {
+                autoDSToolStripMenuItem.Visible = cleanMYDSToolStripMenuItem.Visible = false;
+            }
         }
 
         private void toolStripSplitButtonAn_ButtonClick(object sender, EventArgs e)
