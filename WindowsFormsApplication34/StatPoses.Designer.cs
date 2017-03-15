@@ -73,7 +73,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearStatsButton = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posesenieDataGridView)).BeginInit();
             this.contextMenuStripDOC.SuspendLayout();
@@ -296,7 +295,6 @@
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.clearStatsButton, 5, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -551,15 +549,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Сумма";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // clearStatsButton
-            // 
-            this.clearStatsButton.Location = new System.Drawing.Point(550, 3);
-            this.clearStatsButton.Name = "clearStatsButton";
-            this.clearStatsButton.Size = new System.Drawing.Size(160, 20);
-            this.clearStatsButton.TabIndex = 6;
-            this.clearStatsButton.Text = "Очистить статистику";
-            this.clearStatsButton.UseVisualStyleBackColor = true;
-            // 
             // StatPoses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,6 +625,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button clearStatsButton;
     }
 }

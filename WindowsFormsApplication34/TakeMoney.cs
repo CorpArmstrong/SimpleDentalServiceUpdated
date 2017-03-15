@@ -33,6 +33,9 @@ using System.Windows.Forms;
 
 namespace DSS
 {
+    /// <summary>
+    /// CorpArmstrong FIX: Ability to set up custom date!
+    /// </summary>
     public partial class TakeMoney : Form
     {
         public TakeMoney()
@@ -110,7 +113,7 @@ namespace DSS
             }
         }
 
-        // CorpArmstrong TODO: Ability to set up datetime!
+
         private void button1_Click(object sender, EventArgs e)
         {
             bool close = true;
@@ -120,11 +123,13 @@ namespace DSS
                 {
                     if (MessageBox.Show("Внесена предоплата : " + numericUpDown1.Value.ToString() + ".", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
-                        predoplataTA.Insert(numericUpDown1.Value, DateTime.Now, PID);
-                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "предоплата");
+                        predoplataTA.Insert(numericUpDown1.Value, dateTimePicker1.Value, PID);
+                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "предоплата");
                     }
                     else
-                    { close = false; }
+                    {
+                        close = false;
+                    }
                 }
                 else
                 {
@@ -141,9 +146,9 @@ namespace DSS
                         dolgTableAdapter.Delete(dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
                         if (numericUpDown1.Value != 0)
                         {
-                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
+                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
                         }
-                        plataTableAdapter1.Insert(predSumma, PID, textBox1.Text, DateTime.Now, "учет предоплаты");
+                        plataTableAdapter1.Insert(predSumma, PID, textBox1.Text, dateTimePicker1.Value, "учет предоплаты");
                         for (int i = 0; i < dolgManyIDS.Length; i++)
                         {
                             predoplataTA.DeleteQuery(dolgManyIDS[i]);
@@ -163,10 +168,10 @@ namespace DSS
                             predoplataTA.DeleteQuery(dolgManyIDS[i]);
                         }
                         dolgTableAdapter.Update(dolgRow.posesenie, dolgSumma - (numericUpDown1.Value + predSumma), dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
-                        plataTableAdapter1.Insert(predSumma, PID, textBox1.Text, DateTime.Now, "учет предоплаты");
+                        plataTableAdapter1.Insert(predSumma, PID, textBox1.Text, dateTimePicker1.Value, "учет предоплаты");
                         if (numericUpDown1.Value != 0)
                         {
-                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
+                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
                         }
                     }
                     else
@@ -183,8 +188,8 @@ namespace DSS
                         {
                             predoplataTA.DeleteQuery(dolgManyIDS[i]);
                         }
-                        predoplataTA.Insert(predSumma - dolgSumma, DateTime.Now, PID);
-                        plataTableAdapter1.Insert(dolgSumma, PID, textBox1.Text, DateTime.Now, "учет предоплаты");
+                        predoplataTA.Insert(predSumma - dolgSumma, dateTimePicker1.Value, PID);
+                        plataTableAdapter1.Insert(dolgSumma, PID, textBox1.Text, dateTimePicker1.Value, "учет предоплаты");
                     }
                     else
                     {
@@ -199,7 +204,7 @@ namespace DSS
                     dolgTableAdapter.Delete(dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
                     if (numericUpDown1.Value != 0)
                     {
-                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
+                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
                     }
                 }
                 if (numericUpDown1.Value > dolgSumma)
@@ -207,9 +212,9 @@ namespace DSS
                     if (MessageBox.Show("Долг полностью погашен.\rВнести в предоплату остаток : " + (numericUpDown1.Value - dolgSumma).ToString() + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         dolgTableAdapter.DeleteQueryByID(dolgRow.ID);
-                        plataTableAdapter1.Insert(dolgSumma, PID, textBox1.Text, DateTime.Now, "оплата лечения");
-                        plataTableAdapter1.Insert(numericUpDown1.Value - dolgSumma, PID, textBox1.Text, DateTime.Now, "предоплата");
-                        predoplataTA.Insert(numericUpDown1.Value - dolgSumma, DateTime.Now, PID);
+                        plataTableAdapter1.Insert(dolgSumma, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
+                        plataTableAdapter1.Insert(numericUpDown1.Value - dolgSumma, PID, textBox1.Text, dateTimePicker1.Value, "предоплата");
+                        predoplataTA.Insert(numericUpDown1.Value - dolgSumma, dateTimePicker1.Value, PID);
                     }
                     else
                     {
@@ -224,7 +229,7 @@ namespace DSS
                         dolgTableAdapter.Update(dolgRow.posesenie, dolgSumma - numericUpDown1.Value, dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
                         if (numericUpDown1.Value != 0)
                         {
-                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
+                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
                         }
                     }
                     else
@@ -238,7 +243,7 @@ namespace DSS
                 if (numericUpDown1.Value == dolgSumma)
                 {
                     dolgTableAdapter.DeleteQueryByID(dolgRow.ID);
-                    plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "списание долга");
+                    plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "списание долга");
                 }
 
                 if (numericUpDown1.Value < dolgSumma)
@@ -248,7 +253,7 @@ namespace DSS
                         dolgTableAdapter.Update(dolgRow.posesenie, dolgSumma - numericUpDown1.Value, dolgRow.ID, dolgRow.posesenie, dolgRow.dolg);
                         if (numericUpDown1.Value != 0)
                         {
-                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "списание долга");
+                            plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "списание долга");
                         }
                     }
                     else
@@ -267,7 +272,7 @@ namespace DSS
                     }
                     if (numericUpDown1.Value != 0)
                     {
-                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "оплата лечения");
+                        plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "оплата лечения");
                     }
                 }
             }
@@ -276,7 +281,7 @@ namespace DSS
                 predoplataTA.DeleteQuery(dolgOneID);
                 if (numericUpDown1.Value != 0)
                 {
-                    plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, DateTime.Now, "возврат предоплаты");
+                    plataTableAdapter1.Insert(numericUpDown1.Value, PID, textBox1.Text, dateTimePicker1.Value, "возврат предоплаты");
                 }
             }
             if (close)

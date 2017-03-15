@@ -68,7 +68,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearStatsButton = new System.Windows.Forms.Button();
             this.toolStripFILTR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statDiagnosisDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statDiagnosisBindingSource)).BeginInit();
@@ -220,13 +219,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.statDiagnosisDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.statDiagnosisDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statDiagnosisDataGridView.Location = new System.Drawing.Point(0, 53);
+            this.statDiagnosisDataGridView.Location = new System.Drawing.Point(0, 51);
             this.statDiagnosisDataGridView.Name = "statDiagnosisDataGridView";
             this.statDiagnosisDataGridView.ReadOnly = true;
             this.statDiagnosisDataGridView.RowHeadersVisible = false;
             this.statDiagnosisDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.statDiagnosisDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.statDiagnosisDataGridView.Size = new System.Drawing.Size(984, 396);
+            this.statDiagnosisDataGridView.Size = new System.Drawing.Size(984, 398);
             this.statDiagnosisDataGridView.TabIndex = 2;
             this.statDiagnosisDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.statDiagnosisDataGridView_CellMouseDown);
             // 
@@ -312,13 +311,12 @@
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker2, 4, 0);
             this.tableLayoutPanelData.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker1, 2, 0);
-            this.tableLayoutPanelData.Controls.Add(this.clearStatsButton, 5, 0);
             this.tableLayoutPanelData.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanelData.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanelData.Name = "tableLayoutPanelData";
             this.tableLayoutPanelData.RowCount = 1;
             this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelData.Size = new System.Drawing.Size(984, 28);
+            this.tableLayoutPanelData.Size = new System.Drawing.Size(984, 26);
             this.tableLayoutPanelData.TabIndex = 4;
             this.tableLayoutPanelData.Visible = false;
             // 
@@ -334,7 +332,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(255, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(286, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -391,10 +389,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(398, 0);
+            this.label3.Location = new System.Drawing.Point(429, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 28);
+            this.label3.Size = new System.Drawing.Size(19, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "по";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +401,7 @@
             // 
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(420, 3);
+            this.dateTimePicker2.Location = new System.Drawing.Point(451, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker2.TabIndex = 1;
@@ -413,10 +411,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(255, 0);
+            this.label2.Location = new System.Drawing.Point(286, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 28);
+            this.label2.Size = new System.Drawing.Size(13, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "с";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -425,7 +423,7 @@
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(271, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(302, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -517,15 +515,6 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
             // 
-            // clearStatsButton
-            // 
-            this.clearStatsButton.Location = new System.Drawing.Point(550, 3);
-            this.clearStatsButton.Name = "clearStatsButton";
-            this.clearStatsButton.Size = new System.Drawing.Size(160, 22);
-            this.clearStatsButton.TabIndex = 6;
-            this.clearStatsButton.Text = "Очистить статистику";
-            this.clearStatsButton.UseVisualStyleBackColor = true;
-            // 
             // StatDiagn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +585,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PFIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Many;
-        private System.Windows.Forms.Button clearStatsButton;
     }
 }

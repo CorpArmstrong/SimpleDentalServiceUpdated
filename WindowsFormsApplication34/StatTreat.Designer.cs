@@ -77,7 +77,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearStatsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.statDiagnosisDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statTreatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.___BASA__DataSet)).BeginInit();
@@ -458,7 +457,6 @@
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker2, 4, 0);
             this.tableLayoutPanelData.Controls.Add(this.label_S, 1, 0);
             this.tableLayoutPanelData.Controls.Add(this.dateTimePicker1, 2, 0);
-            this.tableLayoutPanelData.Controls.Add(this.clearStatsButton, 5, 0);
             this.tableLayoutPanelData.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanelData.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanelData.Name = "tableLayoutPanelData";
@@ -632,15 +630,6 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // clearStatsButton
-            // 
-            this.clearStatsButton.Location = new System.Drawing.Point(550, 3);
-            this.clearStatsButton.Name = "clearStatsButton";
-            this.clearStatsButton.Size = new System.Drawing.Size(160, 20);
-            this.clearStatsButton.TabIndex = 6;
-            this.clearStatsButton.Text = "Очистить статистику";
-            this.clearStatsButton.UseVisualStyleBackColor = true;
-            // 
             // StatTreat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -726,6 +715,5 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonFiltrDOC;
         private System.Windows.Forms.ToolStripButton toolStripButtonFiltrPAT;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Button clearStatsButton;
     }
 }
